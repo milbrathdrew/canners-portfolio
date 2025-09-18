@@ -46,12 +46,16 @@ class GitHubPortfolioAdmin {
         this.githubConfig = { owner, repo, token, branch };
         localStorage.setItem('githubConfig', JSON.stringify(this.githubConfig));
         this.showStatus('configStatus', 'GitHub configuration saved successfully!', 'success');
+
+        // Reload portfolio now that GitHub is configured
+        this.loadCurrentPortfolio();
     }
 
-    // Load current portfolio to show existing photos
+    // Load current portfolio to show existing photos (only when GitHub is configured)
     async loadCurrentPortfolio() {
+        // Only load if GitHub is configured (acts like login requirement)
         if (!this.githubConfig.owner || !this.githubConfig.repo || !this.githubConfig.token) {
-            console.log('GitHub not configured yet, skipping portfolio load');
+            console.log('GitHub not configured - photos will appear after configuration');
             return;
         }
 
@@ -129,7 +133,10 @@ class GitHubPortfolioAdmin {
                         <div class="photo-name">${photo.originalName}</div>
                         <div class="photo-alt">Alt: ${photo.altText}</div>
                         <div class="photo-date">Uploaded: ${photo.uploadDate}</div>
-                        <button onclick="window.githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>
+                        ${this.githubConfig.token ?
+                            `<button onclick="window.githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>` :
+                            `<button class="remove-btn" disabled title="Configure GitHub to enable photo removal">Remove (Configure GitHub)</button>`
+                        }
                     </div>
                 `;
                 categoryContainer.appendChild(photoDiv);
