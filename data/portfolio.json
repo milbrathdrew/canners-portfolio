@@ -26,15 +26,6 @@
       "altText": "its a building i like",
       "uploadDate": "2025-09-18",
       "originalName": "buildingOnFilm.jpg"
-    },
-    {
-      "id": "photo_1758224177772_py5sc1pei",
-      "url": "images/portfolio/optimized/medium/zwontag_1758224177772.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/zwontag_1758224177772.jpg",
-      "category": "all",
-      "altText": "huge tag from the train",
-      "uploadDate": "2025-09-18",
-      "originalName": "zwonTag.webp"
     }
   ],
   "categories": [
@@ -69,5 +60,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:48:01.234Z"
+  "lastUpdated": "2025-09-18T19:48:06.215Z"
 }
