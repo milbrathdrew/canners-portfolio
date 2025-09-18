@@ -513,38 +513,38 @@ class GitHubPortfolioAdmin {
 
         container.innerHTML = `
             <div class="success-message">
-                <h4>✅ Portfolio Published Successfully!</h4>
+                <h4>Portfolio Published Successfully!</h4>
                 <p>Your photos have been uploaded to GitHub and will be automatically optimized and deployed.</p>
 
                 <div class="upload-status">
                     <div class="status-item">
-                        <span class="status-icon">✅</span>
+                        <span class="status-icon">[DONE]</span>
                         <span>Photos uploaded to GitHub</span>
                     </div>
                     <div class="status-item pending" id="optimization-status">
-                        <span class="status-icon">⏳</span>
+                        <span class="status-icon">[PROCESSING]</span>
                         <span>Image optimization in progress...</span>
                     </div>
                     <div class="status-item pending" id="deployment-status">
-                        <span class="status-icon">⏳</span>
+                        <span class="status-icon">[PENDING]</span>
                         <span>Website deployment pending...</span>
                     </div>
                 </div>
 
                 <div class="admin-links">
-                    <h5>📊 Monitor Progress:</h5>
+                    <h5>Monitor Progress:</h5>
                     <div class="link-buttons">
                         <a href="https://github.com/${this.githubConfig.owner}/${this.githubConfig.repo}/actions" target="_blank" class="admin-link">
-                            📋 GitHub Actions
+                            GitHub Actions
                         </a>
                         <a href="https://dash.cloudflare.com/a050f67e02b29b846e5ac8f9d3c05570/pages/view/canners-portfolio" target="_blank" class="admin-link">
-                            🌐 Cloudflare Dashboard
+                            Cloudflare Dashboard
                         </a>
                         <a href="https://github.com/${this.githubConfig.owner}/${this.githubConfig.repo}" target="_blank" class="admin-link">
-                            💾 Repository
+                            Repository
                         </a>
                         <a href="https://canners-portfolio.pages.dev/portfolio.html" target="_blank" class="admin-link">
-                            🎨 Live Portfolio
+                            Live Portfolio
                         </a>
                     </div>
                 </div>
@@ -670,14 +670,14 @@ class GitHubPortfolioAdmin {
                                 if (optimizationStatus) {
                                     optimizationStatus.className = 'status-item completed';
                                     optimizationStatus.innerHTML = `
-                                        <span class="status-icon">✅</span>
+                                        <span class="status-icon">[DONE]</span>
                                         <span>Image optimization completed!</span>
                                     `;
                                 }
                                 if (deploymentStatus) {
                                     deploymentStatus.className = 'status-item completed';
                                     deploymentStatus.innerHTML = `
-                                        <span class="status-icon">✅</span>
+                                        <span class="status-icon">[DONE]</span>
                                         <span>Website deployed! Changes are live.</span>
                                     `;
                                 }
@@ -686,7 +686,7 @@ class GitHubPortfolioAdmin {
                                 if (optimizationStatus) {
                                     optimizationStatus.className = 'status-item error';
                                     optimizationStatus.innerHTML = `
-                                        <span class="status-icon">❌</span>
+                                        <span class="status-icon">[ERROR]</span>
                                         <span>Optimization failed - check GitHub Actions</span>
                                     `;
                                 }
