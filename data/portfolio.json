@@ -1,15 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758222749922_c5gp0wgcx",
-      "url": "images/portfolio/optimized/medium/knight_helmet_1758222749922.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758222749922.jpg",
-      "category": "products",
-      "altText": "knights",
-      "uploadDate": "2025-09-18",
-      "originalName": "knight helmet.jpg"
-    },
-    {
       "id": "photo_1758223528529_diku17rrp",
       "url": "images/portfolio/optimized/medium/1_04f4ac7e-c9ef-4084-afcf-ac64ba30c0f4_1267x1267_crop_center_1758223528529.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/1_04f4ac7e-c9ef-4084-afcf-ac64ba30c0f4_1267x1267_crop_center_1758223528529.jpg",
@@ -51,5 +42,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:31:11.448Z"
+  "lastUpdated": "2025-09-18T19:31:14.919Z"
 }
