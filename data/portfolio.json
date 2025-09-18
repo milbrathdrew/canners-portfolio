@@ -68,6 +68,17 @@
       "altText": "exploring nature",
       "uploadDate": "2025-09-18",
       "originalName": "BG3_Party.png"
+    },
+    {
+      "id": "photo_1758235878802_5m6dljzlp",
+      "url": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758235878802.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758235878802.jpg",
+      "fullUrl": "images/portfolio/optimized/full/texturelabs_atmosphere_126s_1758235878802.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/texturelabs_atmosphere_126s_1758235878802.jpg",
+      "category": "textures",
+      "altText": "solar plasma",
+      "uploadDate": "2025-09-18",
+      "originalName": "Texturelabs_Atmosphere_126S.jpg"
     }
   ],
   "categories": [
@@ -102,5 +113,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T22:27:37.795Z"
+  "lastUpdated": "2025-09-18T22:51:28.917Z"
 }
