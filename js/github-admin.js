@@ -389,8 +389,9 @@ class GitHubPortfolioAdmin {
         portfolioData.photos.push(...newPhotos);
         portfolioData.lastUpdated = new Date().toISOString();
 
-        // Upload to GitHub
-        const jsonContent = btoa(JSON.stringify(portfolioData, null, 2));
+        // Upload to GitHub - Use Unicode-safe base64 encoding
+        const jsonString = JSON.stringify(portfolioData, null, 2);
+        const jsonContent = btoa(unescape(encodeURIComponent(jsonString)));
         await this.uploadFileToGitHub('data/portfolio.json', jsonContent, 'Update portfolio with new photos');
     }
 
