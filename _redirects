@@ -1,6 +1,4 @@
 # Cloudflare Pages Redirects Configuration
 
-# Clean URL redirects - only redirect when no file extension
+# Admin redirect only (for convenience)
 /admin  /admin.html  200
-/contact  /contact.html  200
-/shop  /shop.html  200
