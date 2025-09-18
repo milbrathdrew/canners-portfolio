@@ -355,17 +355,43 @@ class GitHubPortfolioAdmin {
     async uploadFileToGitHub(path, content, message) {
         const url = `https://api.github.com/repos/${this.githubConfig.owner}/${this.githubConfig.repo}/contents/${path}`;
 
+        // Check if file exists to get SHA for updates
+        let sha = null;
+        try {
+            const checkResponse = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${this.githubConfig.token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
+            if (checkResponse.ok) {
+                const fileData = await checkResponse.json();
+                sha = fileData.sha;
+            }
+        } catch (error) {
+            // File doesn't exist, that's fine for new files
+        }
+
+        // Upload or update file
+        const uploadData = {
+            message: message,
+            content: content,
+            branch: this.githubConfig.branch
+        };
+
+        // Add SHA if file exists (required for updates)
+        if (sha) {
+            uploadData.sha = sha;
+        }
+
         const response = await fetch(url, {
             method: 'PUT',
             headers: {
                 'Authorization': `token ${this.githubConfig.token}`,
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                message: message,
-                content: content,
-                branch: this.githubConfig.branch
-            })
+            body: JSON.stringify(uploadData)
         });
 
         if (!response.ok) {
