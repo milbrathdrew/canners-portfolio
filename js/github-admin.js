@@ -251,11 +251,11 @@ class GitHubPortfolioAdmin {
                         <label>Category:</label>
                         <select onchange="githubAdmin.updateImageCategory(${index}, this.value)">
                             <option value="all" ${image.category === 'all' ? 'selected' : ''}>All</option>
+                            <option value="nature" ${image.category === 'nature' ? 'selected' : ''}>Nature</option>
+                            <option value="street" ${image.category === 'street' ? 'selected' : ''}>Street</option>
                             <option value="textures" ${image.category === 'textures' ? 'selected' : ''}>Textures</option>
                             <option value="products" ${image.category === 'products' ? 'selected' : ''}>Products</option>
-                            <option value="street" ${image.category === 'street' ? 'selected' : ''}>Street</option>
                             <option value="film" ${image.category === 'film' ? 'selected' : ''}>Film</option>
-                            <option value="nature" ${image.category === 'nature' ? 'selected' : ''}>Nature</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -375,11 +375,11 @@ class GitHubPortfolioAdmin {
                 photos: [],
                 categories: [
                     { "id": "all", "name": "All", "active": true },
+                    { "id": "nature", "name": "Nature", "active": false },
+                    { "id": "street", "name": "Street", "active": false },
                     { "id": "textures", "name": "Textures", "active": false },
                     { "id": "products", "name": "Products", "active": false },
-                    { "id": "street", "name": "Street", "active": false },
-                    { "id": "film", "name": "Film", "active": false },
-                    { "id": "nature", "name": "Nature", "active": false }
+                    { "id": "film", "name": "Film", "active": false }
                 ]
             };
         }

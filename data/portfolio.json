@@ -11,11 +11,11 @@
   ],
   "categories": [
     { "id": "all", "name": "All", "active": true },
+    { "id": "nature", "name": "Nature", "active": false },
+    { "id": "street", "name": "Street", "active": false },
     { "id": "textures", "name": "Textures", "active": false },
     { "id": "products", "name": "Products", "active": false },
-    { "id": "street", "name": "Street", "active": false },
-    { "id": "film", "name": "Film", "active": false },
-    { "id": "nature", "name": "Nature", "active": false }
+    { "id": "film", "name": "Film", "active": false }
   ],
   "lastUpdated": "2024-09-18T12:00:00Z"
 }

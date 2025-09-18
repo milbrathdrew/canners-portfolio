@@ -5,8 +5,8 @@
 }
 
 .admin h2 {
-    font-family: 'Merchant Copy Wide', 'Merchant Copy', Arial, sans-serif;
-    font-size: 36px;
+    font-family: 'Vinque', serif;
+    font-size: 28px;
     font-weight: normal;
     text-align: center;
     margin-bottom: 40px;
@@ -26,7 +26,7 @@
 }
 
 .config-section h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     font-size: 20px;
     margin-bottom: 20px;
     color: #333;
@@ -43,7 +43,7 @@
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 .form-group input,
@@ -52,7 +52,7 @@
     padding: 12px;
     border: 1px solid #ddd;
     font-size: 16px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     transition: border-color 0.3s ease;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .config-btn {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     background-color: #333;
     color: #fff;
     border: none;
@@ -86,7 +86,7 @@
 }
 
 .upload-section h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     font-size: 20px;
     margin-bottom: 20px;
     color: #333;
@@ -117,7 +117,7 @@
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 .browse-link {
@@ -159,12 +159,12 @@
 .progress-text {
     font-size: 14px;
     color: #666;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 /* Images Section */
 .images-section h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     font-size: 20px;
     margin-bottom: 20px;
     color: #333;
@@ -203,7 +203,7 @@
     font-weight: bold;
     margin-bottom: 15px;
     color: #333;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 .image-details .form-group {
@@ -211,7 +211,7 @@
 }
 
 .remove-btn {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     background-color: #d32f2f;
     color: #fff;
     border: none;
@@ -238,7 +238,7 @@
 
 .generate-btn,
 .clear-btn {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     border: none;
     padding: 15px 30px;
     font-size: 14px;
@@ -269,7 +269,7 @@
 
 /* Portfolio Update Section */
 .code-section h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     font-size: 20px;
     margin-bottom: 15px;
     color: #333;
@@ -288,7 +288,7 @@
 }
 
 .success-message h4 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     color: #2e7d32;
     margin-bottom: 10px;
     font-size: 18px;
@@ -297,7 +297,7 @@
 .success-message p {
     color: #2e7d32;
     margin-bottom: 20px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 .download-container {
@@ -308,7 +308,7 @@
 }
 
 .download-link {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     background-color: #2e7d32;
     color: #fff !important;
     text-decoration: none;
@@ -331,7 +331,7 @@
     font-size: 14px;
     line-height: 1.5;
     text-align: left;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 .instructions strong {
@@ -347,7 +347,7 @@
 }
 
 .current-section h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     margin-bottom: 15px;
     color: #333;
 }
@@ -377,7 +377,7 @@
 .current-photo-item .photo-name {
     font-weight: bold;
     margin-bottom: 5px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 .current-photo-item .photo-category,
@@ -393,7 +393,7 @@
 }
 
 .publish-section h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
     margin-bottom: 15px;
     color: #333;
 }
@@ -431,7 +431,7 @@
     padding: 10px;
     border-radius: 4px;
     font-size: 14px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Linux Libertine', Georgia, serif;
 }
 
 .status-message.success {
