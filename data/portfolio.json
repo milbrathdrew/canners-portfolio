@@ -79,6 +79,17 @@
       "altText": "solar plasma",
       "uploadDate": "2025-09-18",
       "originalName": "Texturelabs_Atmosphere_126S.jpg"
+    },
+    {
+      "id": "photo_1758236241619_bg3h9i1aw",
+      "url": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758236241619.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758236241619.jpg",
+      "fullUrl": "images/portfolio/optimized/full/texturelabs_atmosphere_126s_1758236241619.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/texturelabs_atmosphere_126s_1758236241619.jpg",
+      "category": "textures",
+      "altText": "solar plasma ",
+      "uploadDate": "2025-09-18",
+      "originalName": "Texturelabs_Atmosphere_126S.jpg"
     }
   ],
   "categories": [
@@ -113,5 +124,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T22:51:28.917Z"
+  "lastUpdated": "2025-09-18T22:57:33.351Z"
 }
