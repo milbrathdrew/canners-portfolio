@@ -486,3 +486,94 @@
         width: 100%;
     }
 }
+
+/* Category Organization */
+.category-section {
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.category-title {
+    font-family: 'Vinque', serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 15px 20px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category-photos {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.current-photo-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #fff;
+    transition: box-shadow 0.2s ease;
+}
+
+.current-photo-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.photo-preview {
+    flex-shrink: 0;
+}
+
+.photo-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.photo-name {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.photo-alt {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.photo-date {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.image-placeholder {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    color: #999;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .category-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .current-photo-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

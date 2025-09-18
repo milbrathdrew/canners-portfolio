@@ -75,7 +75,7 @@ class GitHubPortfolioAdmin {
         }
     }
 
-    // Display current photos from portfolio
+    // Display current photos from portfolio organized by category
     displayCurrentPhotos(photos) {
         if (photos.length === 0) return;
 
@@ -85,22 +85,71 @@ class GitHubPortfolioAdmin {
         const container = document.getElementById('currentPhotosList');
         container.innerHTML = '';
 
-        photos.forEach((photo, index) => {
-            const photoDiv = document.createElement('div');
-            photoDiv.className = 'current-photo-item';
-            photoDiv.innerHTML = `
-                <div class="photo-preview">
-                    <img src="${photo.url}" alt="${photo.altText}" style="width: 100px; height: 100px; object-fit: cover;">
-                </div>
-                <div class="photo-details">
-                    <div class="photo-name">${photo.originalName}</div>
-                    <div class="photo-category">Category: ${photo.category}</div>
-                    <div class="photo-alt">Alt: ${photo.altText}</div>
-                    <button onclick="githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>
-                </div>
-            `;
-            container.appendChild(photoDiv);
+        // Group photos by category
+        const photosByCategory = {};
+        const categories = ['nature', 'street', 'textures', 'products', 'film', 'all'];
+
+        photos.forEach(photo => {
+            const category = photo.category || 'all';
+            if (!photosByCategory[category]) {
+                photosByCategory[category] = [];
+            }
+            photosByCategory[category].push(photo);
         });
+
+        // Display photos organized by category
+        categories.forEach(categoryId => {
+            const categoryPhotos = photosByCategory[categoryId];
+            if (!categoryPhotos || categoryPhotos.length === 0) return;
+
+            // Category header
+            const categoryHeader = document.createElement('div');
+            categoryHeader.className = 'category-section';
+            categoryHeader.innerHTML = `
+                <h4 class="category-title">${this.getCategoryDisplayName(categoryId)} (${categoryPhotos.length} photos)</h4>
+                <div class="category-photos"></div>
+            `;
+
+            const categoryContainer = categoryHeader.querySelector('.category-photos');
+
+            // Add photos for this category
+            categoryPhotos.forEach(photo => {
+                const photoDiv = document.createElement('div');
+                photoDiv.className = 'current-photo-item';
+                photoDiv.innerHTML = `
+                    <div class="photo-preview">
+                        <img src="${photo.fallbackUrl || photo.url}" alt="${photo.altText}"
+                             style="width: 100px; height: 100px; object-fit: cover;"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-placeholder" style="display: none; width: 100px; height: 100px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #666;">
+                            Processing...
+                        </div>
+                    </div>
+                    <div class="photo-details">
+                        <div class="photo-name">${photo.originalName}</div>
+                        <div class="photo-alt">Alt: ${photo.altText}</div>
+                        <div class="photo-date">Uploaded: ${photo.uploadDate}</div>
+                        <button onclick="githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>
+                    </div>
+                `;
+                categoryContainer.appendChild(photoDiv);
+            });
+
+            container.appendChild(categoryHeader);
+        });
+    }
+
+    // Get display name for category
+    getCategoryDisplayName(categoryId) {
+        const categoryNames = {
+            'nature': 'Nature',
+            'street': 'Street',
+            'textures': 'Textures',
+            'products': 'Products',
+            'film': 'Film',
+            'all': 'Uncategorized'
+        };
+        return categoryNames[categoryId] || 'Unknown';
     }
 
     // Setup event listeners
@@ -481,6 +530,65 @@ class GitHubPortfolioAdmin {
             this.uploadedImages = [];
             document.querySelector('.images-section').style.display = 'none';
             document.querySelector('.publish-section').style.display = 'none';
+        }
+    }
+
+    // Remove existing photo from portfolio
+    async removeExistingPhoto(photoId) {
+        if (!confirm('Are you sure you want to remove this photo from your portfolio?')) {
+            return;
+        }
+
+        try {
+            this.showStatus('publishStatus', 'Removing photo...', 'info');
+
+            // Load current portfolio from GitHub
+            const url = `https://api.github.com/repos/${this.githubConfig.owner}/${this.githubConfig.repo}/contents/data/portfolio.json`;
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${this.githubConfig.token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to load portfolio data');
+            }
+
+            const fileData = await response.json();
+            const decodedContent = atob(fileData.content);
+            const portfolioData = JSON.parse(decodedContent);
+
+            // Find and remove the photo
+            const photoIndex = portfolioData.photos.findIndex(photo => photo.id === photoId);
+            if (photoIndex === -1) {
+                throw new Error('Photo not found in portfolio');
+            }
+
+            const removedPhoto = portfolioData.photos[photoIndex];
+            portfolioData.photos.splice(photoIndex, 1);
+            portfolioData.lastUpdated = new Date().toISOString();
+
+            // Update portfolio.json
+            const jsonString = JSON.stringify(portfolioData, null, 2);
+            const jsonContent = btoa(unescape(encodeURIComponent(jsonString)));
+
+            // Upload updated portfolio.json with the file's SHA
+            await this.uploadFileToGitHub('data/portfolio.json', jsonContent, `Remove photo: ${removedPhoto.originalName}`);
+
+            // Note: We don't delete the actual image files as they might be referenced elsewhere
+            // or we might want to keep them for backup purposes
+
+            this.showStatus('publishStatus', 'Photo removed successfully! The website will update automatically.', 'success');
+
+            // Refresh the current photos display
+            setTimeout(() => {
+                this.loadCurrentPortfolio();
+            }, 1000);
+
+        } catch (error) {
+            console.error('Remove photo failed:', error);
+            this.showStatus('publishStatus', `Failed to remove photo: ${error.message}`, 'error');
         }
     }
 
