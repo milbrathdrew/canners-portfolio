@@ -24,6 +24,14 @@ class GitHubPortfolioAdmin {
         const saved = localStorage.getItem('githubConfig');
         if (saved) {
             this.githubConfig = JSON.parse(saved);
+
+            // Migrate old configurations from 'main' to 'media' branch
+            if (this.githubConfig.branch === 'main') {
+                console.log('Migrating GitHub configuration from main to media branch');
+                this.githubConfig.branch = 'media';
+                localStorage.setItem('githubConfig', JSON.stringify(this.githubConfig));
+            }
+
             document.getElementById('githubOwner').value = this.githubConfig.owner;
             document.getElementById('githubRepo').value = this.githubConfig.repo;
             document.getElementById('githubToken').value = this.githubConfig.token;
