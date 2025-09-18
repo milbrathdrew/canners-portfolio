@@ -11,6 +11,34 @@
 /images/*
   Cache-Control: max-age=31536000, immutable
 
+# Font files - CORS and caching headers for custom domain compatibility
+/fonts/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Headers: *
+  Cache-Control: max-age=31536000, immutable
+
+# Specific font file types with correct MIME types
+/fonts/*.woff2
+  Content-Type: font/woff2
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+
+/fonts/*.woff
+  Content-Type: font/woff
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+
+/fonts/*.ttf
+  Content-Type: font/ttf
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+
+/fonts/*.otf
+  Content-Type: font/otf
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+
 # Cache HTML files for a shorter time to allow updates
 /*.html
   Cache-Control: max-age=3600

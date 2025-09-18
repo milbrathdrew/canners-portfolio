@@ -1,7 +1,8 @@
-/* Custom Fonts */
+/* Custom Fonts - Optimized for cross-domain compatibility */
 @font-face {
     font-family: 'Vinque';
-    src: url('../fonts/Vinque Rg.otf') format('opentype');
+    src: url('../fonts/Vinque-Regular.woff2') format('woff2'),
+         url('../fonts/Vinque Rg.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,7 +10,8 @@
 
 @font-face {
     font-family: 'Linux Libertine';
-    src: url('../fonts/LinLibertine_R.ttf') format('truetype');
+    src: url('../fonts/LinLibertine-Regular.woff2') format('woff2'),
+         url('../fonts/LinLibertine_R.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,7 +19,8 @@
 
 @font-face {
     font-family: 'Linux Libertine';
-    src: url('../fonts/LinLibertine_RB.ttf') format('truetype');
+    src: url('../fonts/LinLibertine-Bold.woff2') format('woff2'),
+         url('../fonts/LinLibertine_RB.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -25,7 +28,8 @@
 
 @font-face {
     font-family: 'Linux Libertine';
-    src: url('../fonts/LinLibertine_RI.ttf') format('truetype');
+    src: url('../fonts/LinLibertine-Italic.woff2') format('woff2'),
+         url('../fonts/LinLibertine_RI.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -33,7 +37,8 @@
 
 @font-face {
     font-family: 'Linux Libertine';
-    src: url('../fonts/LinLibertine_RBI.ttf') format('truetype');
+    src: url('../fonts/LinLibertine-BoldItalic.woff2') format('woff2'),
+         url('../fonts/LinLibertine_RBI.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
