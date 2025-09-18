@@ -50,10 +50,24 @@ class GitHubPortfolioAdmin {
 
     // Load current portfolio to show existing photos
     async loadCurrentPortfolio() {
+        if (!this.githubConfig.owner || !this.githubConfig.repo || !this.githubConfig.token) {
+            console.log('GitHub not configured yet, skipping portfolio load');
+            return;
+        }
+
         try {
-            const response = await fetch('data/portfolio.json');
+            const url = `https://api.github.com/repos/${this.githubConfig.owner}/${this.githubConfig.repo}/contents/data/portfolio.json`;
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${this.githubConfig.token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
             if (response.ok) {
-                const data = await response.json();
+                const fileData = await response.json();
+                const decodedContent = atob(fileData.content);
+                const data = JSON.parse(decodedContent);
                 this.displayCurrentPhotos(data.photos || []);
             }
         } catch (error) {
@@ -364,11 +378,24 @@ class GitHubPortfolioAdmin {
 
     // Update portfolio.json
     async updatePortfolioJson(newPhotos) {
-        // Load existing portfolio
+        // Load existing portfolio from GitHub
         let portfolioData;
         try {
-            const response = await fetch('data/portfolio.json');
-            portfolioData = await response.json();
+            const url = `https://api.github.com/repos/${this.githubConfig.owner}/${this.githubConfig.repo}/contents/data/portfolio.json`;
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${this.githubConfig.token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
+            if (response.ok) {
+                const fileData = await response.json();
+                const decodedContent = atob(fileData.content);
+                portfolioData = JSON.parse(decodedContent);
+            } else {
+                throw new Error('Portfolio file not found');
+            }
         } catch (error) {
             // Create new structure if doesn't exist
             portfolioData = {
