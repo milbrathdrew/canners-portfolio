@@ -1,14 +1,5 @@
 {
-  "photos": [
-    {
-      "id": "example_1",
-      "url": "https://res.cloudinary.com/dcmiwur5s/image/upload/w_800,f_auto,q_auto,c_fill/placeholder",
-      "category": "textures",
-      "altText": "Example texture photography",
-      "uploadDate": "2024-09-18",
-      "originalName": "example.jpg"
-    }
-  ],
+  "photos": [],
   "categories": [
     { "id": "all", "name": "All", "active": true },
     { "id": "nature", "name": "Nature", "active": false },
