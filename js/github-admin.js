@@ -6,7 +6,7 @@ class GitHubPortfolioAdmin {
             owner: '',
             repo: '',
             token: '',
-            branch: 'main'
+            branch: 'media'  // Use media branch for photo uploads to reduce main branch commit spam
         };
 
         this.init();
@@ -36,7 +36,7 @@ class GitHubPortfolioAdmin {
         const owner = document.getElementById('githubOwner').value.trim();
         const repo = document.getElementById('githubRepo').value.trim();
         const token = document.getElementById('githubToken').value.trim();
-        const branch = document.getElementById('githubBranch').value.trim() || 'main';
+        const branch = document.getElementById('githubBranch').value.trim() || 'media';
 
         if (!owner || !repo || !token) {
             this.showStatus('configStatus', 'Please fill in Owner, Repository, and Personal Access Token', 'error');

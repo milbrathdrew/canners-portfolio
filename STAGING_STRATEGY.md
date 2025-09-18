@@ -53,30 +53,35 @@ uploads → media branch → GitHub Actions → deploy to main
 - Complex branch management
 - Potential merge conflicts
 
-## Recommended Approach: Option 2 (Squash Commits)
+## Implemented Approach: Option 3 (Dedicated Media Branch)
 
-### Implementation Plan:
-1. **Modify admin interface** to collect multiple uploads before committing
-2. **Batch uploads** - allow multiple photos in single session
-3. **Single commit** for entire upload session
-4. **GitHub Actions** creates optimized images in same workflow
-5. **Amend commit** to include optimized images (avoiding separate commit)
+**Status: ✅ IMPLEMENTING** - Using `media` branch for all photo uploads
 
-### Technical Changes:
-- Add "staging area" in admin interface for multiple photos
-- Modify GitHub Actions to amend original commit instead of creating new one
-- Update commit messages to be more descriptive
-- Add upload session tracking
+### Media Branch Implementation:
 
-### Benefits:
-- 1 commit per upload session instead of 3+ commits per photo
-- Maintains immediate live updates
-- Cleaner git history
-- Better for code reviews
+#### Workflow:
+1. **Admin uploads** → `media` branch (all photo commits)
+2. **GitHub Actions** → optimize images in `media` branch
+3. **Periodic merges** → `media` branch → `main` branch (clean history)
+4. **Deployments** → `main` branch only (production)
 
-## Implementation Priority:
-1. **Phase 1:** Batch upload functionality (multiple photos per session)
-2. **Phase 2:** Commit squashing logic
-3. **Phase 3:** GitHub Actions integration to amend commits
+#### Technical Changes:
+- ✅ Created `media` branch for all photo operations
+- 🔄 Modify admin interface to target `media` branch
+- 🔄 Update GitHub Actions to work with `media` branch
+- 🔄 Add merge workflow from `media` to `main`
+- 🔄 Configure Cloudflare Pages to deploy from `main` only
+
+#### Benefits:
+- 🎯 **Clean main branch** - no photo upload noise
+- 🎯 **Isolated media workflow** - all photo operations in `media`
+- 🎯 **Controlled deployments** - merge to `main` when ready
+- 🎯 **Better git history** - main branch for features, media for content
+
+#### Implementation Phases:
+1. **Phase 1: ✅ Branch Setup** - Create and configure `media` branch
+2. **Phase 2: 🔄 Admin Targeting** - Update admin to use `media` branch
+3. **Phase 3: 🔄 Actions Update** - Configure GitHub Actions for `media`
+4. **Phase 4: 🔄 Merge Workflow** - Implement periodic `media` → `main` merges
 
 This approach balances clean git history with immediate deployment needs.
