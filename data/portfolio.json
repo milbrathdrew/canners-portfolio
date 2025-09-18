@@ -10,15 +10,6 @@
       "originalName": "Screenshot 2025-09-10 at 12.43.47 PM.png"
     },
     {
-      "id": "photo_1758217199928_m8wkcamqw",
-      "url": "images/portfolio/optimized/medium/1320705_1758217199929.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/1320705_1758217199929.jpg",
-      "category": "nature",
-      "altText": "baldurs gate 3",
-      "uploadDate": "2025-09-18",
-      "originalName": "1320705.png"
-    },
-    {
       "id": "photo_1758222749922_c5gp0wgcx",
       "url": "images/portfolio/optimized/medium/knight_helmet_1758222749922.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758222749922.jpg",
@@ -69,5 +60,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:25:40.951Z"
+  "lastUpdated": "2025-09-18T19:31:08.801Z"
 }
