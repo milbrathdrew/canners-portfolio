@@ -221,22 +221,28 @@ class GitHubPortfolioAdmin {
             return;
         }
 
-        const validFiles = Array.from(files).filter(file => file.type.startsWith('image/'));
+        // Clear previous validation messages
+        this.clearValidationMessages();
 
-        if (validFiles.length === 0) {
-            alert('Please select valid image files');
+        const fileValidation = this.validateFiles(files);
+
+        if (fileValidation.invalid.length > 0) {
+            this.showValidationErrors(fileValidation);
+        }
+
+        if (fileValidation.valid.length === 0) {
             return;
         }
 
         this.showProgress(true);
 
-        for (let i = 0; i < validFiles.length; i++) {
+        for (let i = 0; i < fileValidation.valid.length; i++) {
             try {
-                await this.processImage(validFiles[i]);
-                this.updateProgress((i + 1) / validFiles.length * 100);
+                await this.processImage(fileValidation.valid[i]);
+                this.updateProgress((i + 1) / fileValidation.valid.length * 100);
             } catch (error) {
                 console.error('Processing failed:', error);
-                alert(`Failed to process ${validFiles[i].name}: ${error.message}`);
+                alert(`Failed to process ${fileValidation.valid[i].name}: ${error.message}`);
             }
         }
 
@@ -728,6 +734,77 @@ class GitHubPortfolioAdmin {
                 element.className = 'status-message';
             }, 5000);
         }
+    }
+
+    // Validate uploaded files
+    validateFiles(files) {
+        const supportedExtensions = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'];
+        const supportedMimeTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+        const maxFileSize = 50 * 1024 * 1024; // 50MB
+
+        const valid = [];
+        const invalid = [];
+
+        Array.from(files).forEach(file => {
+            const fileName = file.name.toLowerCase();
+            const fileExtension = fileName.substring(fileName.lastIndexOf('.'));
+            const isValidExtension = supportedExtensions.some(ext => ext.toLowerCase() === fileExtension);
+            const isValidMimeType = supportedMimeTypes.includes(file.type);
+            const isValidSize = file.size <= maxFileSize;
+
+            if (!isValidExtension || !isValidMimeType) {
+                invalid.push({
+                    file: file,
+                    reason: `Unsupported format: ${fileExtension.toUpperCase()} (${file.type}). Only JPG, JPEG, PNG are supported.`
+                });
+            } else if (!isValidSize) {
+                invalid.push({
+                    file: file,
+                    reason: `File too large: ${Math.round(file.size / 1024 / 1024)}MB. Maximum size is 50MB.`
+                });
+            } else {
+                valid.push(file);
+            }
+        });
+
+        return { valid, invalid };
+    }
+
+    // Show validation error messages
+    showValidationErrors(fileValidation) {
+        const validationDiv = document.getElementById('fileValidation');
+
+        let html = '<div class="validation-errors">';
+        html += '<h4>File Validation Issues:</h4>';
+
+        fileValidation.invalid.forEach(item => {
+            html += `<div class="validation-error">
+                <strong>${item.file.name}</strong>: ${item.reason}
+            </div>`;
+        });
+
+        if (fileValidation.valid.length > 0) {
+            html += `<div class="validation-success">
+                ${fileValidation.valid.length} valid file(s) will be processed.
+            </div>`;
+        }
+
+        html += '</div>';
+
+        validationDiv.innerHTML = html;
+        validationDiv.style.display = 'block';
+
+        // Auto-hide after 10 seconds
+        setTimeout(() => {
+            this.clearValidationMessages();
+        }, 10000);
+    }
+
+    // Clear validation messages
+    clearValidationMessages() {
+        const validationDiv = document.getElementById('fileValidation');
+        validationDiv.innerHTML = '';
+        validationDiv.style.display = 'none';
     }
 }
 

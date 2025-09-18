@@ -1,5 +1,44 @@
 /* Admin Interface Styles */
 
+/* File Validation Styles */
+.file-validation {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.validation-errors h4 {
+    margin: 0 0 15px 0;
+    color: #d32f2f;
+    font-size: 16px;
+    font-family: 'Linux Libertine', Georgia, serif;
+}
+
+.validation-error {
+    background: #ffebee;
+    border: 1px solid #ffcdd2;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    color: #c62828;
+    font-size: 14px;
+}
+
+.validation-success {
+    background: #e8f5e8;
+    border: 1px solid #c8e6c9;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+.validation-error strong {
+    font-weight: bold;
+}
+
 .admin {
     padding: 60px 0;
 }

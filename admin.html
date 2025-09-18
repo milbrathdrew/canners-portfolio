@@ -81,10 +81,13 @@
                                     <line x1="12" y1="15" x2="12" y2="3"></line>
                                 </svg>
                                 <p>Drag & drop images here or <span class="browse-link">browse files</span></p>
-                                <small>Supports JPG, PNG, WebP - Will be automatically optimized</small>
+                                <small>Supports: JPG, JPEG, PNG only - Will be automatically optimized</small>
                             </div>
-                            <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                            <input type="file" id="fileInput" multiple accept=".jpg,.jpeg,.png,.JPG,.JPEG,.PNG" hidden>
                         </div>
+
+                        <!-- File Validation Messages -->
+                        <div id="fileValidation" class="file-validation" style="display: none;"></div>
 
                         <!-- Upload Progress -->
                         <div id="uploadProgress" class="upload-progress" style="display: none;">
