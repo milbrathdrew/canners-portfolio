@@ -17,6 +17,15 @@
       "altText": "baldurs gate 3",
       "uploadDate": "2025-09-18",
       "originalName": "1320705.png"
+    },
+    {
+      "id": "photo_1758222749922_c5gp0wgcx",
+      "url": "images/portfolio/optimized/medium/knight_helmet_1758222749922.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758222749922.jpg",
+      "category": "products",
+      "altText": "knights",
+      "uploadDate": "2025-09-18",
+      "originalName": "knight helmet.jpg"
     }
   ],
   "categories": [
@@ -51,5 +60,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T17:40:30.183Z"
+  "lastUpdated": "2025-09-18T19:12:39.027Z"
 }
