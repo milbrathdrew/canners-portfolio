@@ -4,6 +4,7 @@ class DynamicPortfolio {
         this.photos = [];
         this.categories = [];
         this.currentFilter = 'all';
+        this.currentLightboxIndex = 0;
         this.init();
     }
 
@@ -12,6 +13,7 @@ class DynamicPortfolio {
             await this.loadPortfolioData();
             this.renderGallery();
             this.setupFiltering();
+            this.setupLightbox();
         } catch (error) {
             console.error('Failed to load portfolio:', error);
             this.showFallbackContent();
@@ -97,6 +99,12 @@ class DynamicPortfolio {
 
         picture.appendChild(img);
         item.appendChild(picture);
+
+        // Add click handler for lightbox
+        item.addEventListener('click', () => {
+            this.openLightbox(photo);
+        });
+
         return item;
     }
 
@@ -191,6 +199,150 @@ class DynamicPortfolio {
             categories: this.categories,
             lastUpdated: new Date().toISOString()
         };
+    }
+
+    // Setup lightbox functionality
+    setupLightbox() {
+        // Create lightbox HTML if it doesn't exist
+        if (!document.querySelector('.lightbox')) {
+            const lightboxHTML = `
+                <div class="lightbox" id="lightbox">
+                    <div class="lightbox-content">
+                        <img class="lightbox-image" id="lightboxImage" alt="">
+                        <button class="lightbox-close" id="lightboxClose">&times;</button>
+                        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+                        <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
+                        <div class="lightbox-info" id="lightboxInfo"></div>
+                        <div class="lightbox-loading" id="lightboxLoading">Loading...</div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+        }
+
+        // Setup event listeners
+        document.getElementById('lightboxClose').addEventListener('click', () => this.closeLightbox());
+        document.getElementById('lightboxPrev').addEventListener('click', () => this.prevImage());
+        document.getElementById('lightboxNext').addEventListener('click', () => this.nextImage());
+
+        // Close on background click
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                this.closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!document.querySelector('.lightbox.active')) return;
+
+            switch(e.key) {
+                case 'Escape':
+                    this.closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    this.prevImage();
+                    break;
+                case 'ArrowRight':
+                    this.nextImage();
+                    break;
+            }
+        });
+    }
+
+    // Open lightbox with specific photo
+    openLightbox(photo) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxInfo = document.getElementById('lightboxInfo');
+        const lightboxLoading = document.getElementById('lightboxLoading');
+
+        // Get filtered photos for navigation
+        const filteredPhotos = this.currentFilter === 'all'
+            ? this.photos
+            : this.photos.filter(p => p.category === this.currentFilter);
+
+        // Find index in filtered photos
+        this.currentLightboxIndex = filteredPhotos.findIndex(p => p.id === photo.id || p.url === photo.url);
+
+        // Show loading
+        lightboxLoading.style.display = 'block';
+        lightboxImage.style.opacity = '0';
+
+        // Set image source
+        lightboxImage.src = photo.url;
+        lightboxImage.alt = photo.altText || photo.originalName;
+
+        // Set info
+        lightboxInfo.textContent = photo.altText || photo.originalName || 'Photo';
+
+        // Show lightbox
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // Handle image loading
+        lightboxImage.onload = () => {
+            lightboxLoading.style.display = 'none';
+            lightboxImage.style.opacity = '1';
+        };
+
+        lightboxImage.onerror = () => {
+            lightboxLoading.style.display = 'none';
+            lightboxInfo.textContent = 'Failed to load image';
+        };
+
+        // Update navigation buttons
+        this.updateNavigationButtons(filteredPhotos);
+    }
+
+    // Close lightbox
+    closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Reset image
+        setTimeout(() => {
+            document.getElementById('lightboxImage').src = '';
+        }, 300);
+    }
+
+    // Navigate to previous image
+    prevImage() {
+        const filteredPhotos = this.currentFilter === 'all'
+            ? this.photos
+            : this.photos.filter(p => p.category === this.currentFilter);
+
+        if (filteredPhotos.length <= 1) return;
+
+        this.currentLightboxIndex = (this.currentLightboxIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
+        this.openLightbox(filteredPhotos[this.currentLightboxIndex]);
+    }
+
+    // Navigate to next image
+    nextImage() {
+        const filteredPhotos = this.currentFilter === 'all'
+            ? this.photos
+            : this.photos.filter(p => p.category === this.currentFilter);
+
+        if (filteredPhotos.length <= 1) return;
+
+        this.currentLightboxIndex = (this.currentLightboxIndex + 1) % filteredPhotos.length;
+        this.openLightbox(filteredPhotos[this.currentLightboxIndex]);
+    }
+
+    // Update navigation button visibility
+    updateNavigationButtons(filteredPhotos) {
+        const prevBtn = document.getElementById('lightboxPrev');
+        const nextBtn = document.getElementById('lightboxNext');
+
+        if (filteredPhotos.length <= 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        } else {
+            prevBtn.style.display = 'flex';
+            nextBtn.style.display = 'flex';
+        }
     }
 }
 
