@@ -1,0 +1,130 @@
+/* Etherlords 2 Custom Cursors */
+
+/* Base cursor definitions - will work once PNG files are available */
+
+/* Default cursors with fallbacks */
+.cursor-etherlords-default {
+    cursor: url('../cursors/web/hand.png') 12 12, auto;
+}
+
+.cursor-etherlords-pointer {
+    cursor: url('../cursors/web/hand.png') 12 12, pointer;
+}
+
+.cursor-etherlords-precise {
+    cursor: url('../cursors/web/precise.png') 2 2, text;
+}
+
+.cursor-etherlords-crosshair {
+    cursor: url('../cursors/web/cross.png') 16 16, crosshair;
+}
+
+.cursor-etherlords-resize-horizontal {
+    cursor: url('../cursors/web/hor.png') 16 16, ew-resize;
+}
+
+.cursor-etherlords-resize-vertical {
+    cursor: url('../cursors/web/ver.png') 16 16, ns-resize;
+}
+
+.cursor-etherlords-resize-diag-br {
+    cursor: url('../cursors/web/diagbr.png') 16 16, nw-resize;
+}
+
+.cursor-etherlords-resize-diag-tr {
+    cursor: url('../cursors/web/diagtr.png') 16 16, ne-resize;
+}
+
+/* Apply cursors to specific elements */
+
+/* Portfolio and gallery images */
+.gallery img,
+.image-preview img,
+.current-photo-item img {
+    cursor: url('../cursors/web/cross.png') 16 16, crosshair;
+}
+
+/* Navigation and interactive elements */
+.main-nav a,
+.category-link,
+.admin-link,
+button,
+.browse-link {
+    cursor: url('../cursors/web/hand.png') 12 12, pointer;
+}
+
+/* Text input areas */
+input[type="text"],
+input[type="email"],
+textarea {
+    cursor: url('../cursors/web/precise.png') 2 2, text;
+}
+
+/* Special admin interface elements */
+.remove-btn {
+    cursor: url('../cursors/web/cross.png') 16 16, pointer;
+}
+
+.progress-bar,
+.upload-progress {
+    cursor: url('../cursors/web/hand.png') 12 12, progress;
+}
+
+/* Drag and drop zones */
+.drop-zone,
+#dropZone {
+    cursor: url('../cursors/web/hand.png') 12 12, copy;
+}
+
+.drop-zone.drag-over {
+    cursor: url('../cursors/web/cross.png') 16 16, copy;
+}
+
+/* Logo and branding */
+.logo {
+    cursor: url('../cursors/web/hand.png') 12 12, pointer;
+}
+
+/* Category navigation */
+.category-nav a {
+    cursor: url('../cursors/web/hand.png') 12 12, pointer;
+}
+
+/* Form elements */
+select,
+option {
+    cursor: url('../cursors/web/hand.png') 12 12, pointer;
+}
+
+/* Disabled elements */
+button:disabled,
+.remove-btn:disabled {
+    cursor: url('../cursors/web/cross.png') 16 16, not-allowed;
+}
+
+/* Loading states - for future animated cursor implementation */
+.loading,
+.publishing,
+.optimizing {
+    cursor: url('../cursors/web/hand.png') 12 12, wait;
+}
+
+/* Hover effects with cursor changes */
+.portfolio .gallery .gallery-item:hover {
+    cursor: url('../cursors/web/cross.png') 16 16, zoom-in;
+}
+
+/* Admin specific cursors */
+.admin-improvements .current-photo-item:hover {
+    cursor: url('../cursors/web/hand.png') 12 12, pointer;
+}
+
+/* Typography-specific cursors */
+h1, h2, h3, h4, h5, h6 {
+    cursor: url('../cursors/web/precise.png') 2 2, default;
+}
+
+/* Body default cursor */
+body {
+    cursor: url('../cursors/web/hand.png') 12 12, auto;
+}
