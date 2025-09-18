@@ -269,9 +269,22 @@ class DynamicPortfolio {
         lightboxLoading.style.display = 'block';
         lightboxImage.style.opacity = '0';
 
-        // Set image source
-        lightboxImage.src = photo.url;
+        // Set image source - use full resolution if available, otherwise fallback to medium
+        const lightboxImageUrl = photo.fullUrl || photo.url;
+        lightboxImage.src = lightboxImageUrl;
         lightboxImage.alt = photo.altText || photo.originalName;
+
+        // Add error handling to fallback to JPEG if WebP fails
+        lightboxImage.onerror = () => {
+            if (lightboxImage.src === photo.fullUrl && photo.fullFallbackUrl) {
+                lightboxImage.src = photo.fullFallbackUrl;
+            } else if (lightboxImage.src === photo.fullFallbackUrl && photo.fallbackUrl) {
+                lightboxImage.src = photo.fallbackUrl;
+            } else {
+                lightboxLoading.style.display = 'none';
+                lightboxInfo.textContent = 'Failed to load image';
+            }
+        };
 
         // Set info
         lightboxInfo.textContent = photo.altText || photo.originalName || 'Photo';
@@ -284,11 +297,6 @@ class DynamicPortfolio {
         lightboxImage.onload = () => {
             lightboxLoading.style.display = 'none';
             lightboxImage.style.opacity = '1';
-        };
-
-        lightboxImage.onerror = () => {
-            lightboxLoading.style.display = 'none';
-            lightboxInfo.textContent = 'Failed to load image';
         };
 
         // Update navigation buttons

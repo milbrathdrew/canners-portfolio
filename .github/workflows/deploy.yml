@@ -35,6 +35,7 @@ jobs:
         mkdir -p images/portfolio/optimized/small
         mkdir -p images/portfolio/optimized/medium
         mkdir -p images/portfolio/optimized/large
+        mkdir -p images/portfolio/optimized/full
 
         # Optimize images in different sizes if portfolio images exist
         if [ -d "images/portfolio/original" ] && [ "$(ls -A images/portfolio/original 2>/dev/null)" ]; then
@@ -70,7 +71,7 @@ jobs:
             fi
           done
 
-          # Large size (1200px)
+          # Large size (1200px) - still cropped for grid consistency
           for file in images/portfolio/original/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
             if [ -f "$file" ]; then
               filename=$(basename "$file")
@@ -82,6 +83,21 @@ jobs:
 
               # WebP version
               sharp -i "$file" -o "images/portfolio/optimized/large/${name}.webp" resize 1200 1200 --fit cover --format webp --quality 85
+            fi
+          done
+
+          # Full resolution (preserve aspect ratio for lightbox)
+          for file in images/portfolio/original/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
+            if [ -f "$file" ]; then
+              filename=$(basename "$file")
+              name="${filename%.*}"
+              echo "Creating full resolution versions of $filename"
+
+              # JPEG optimization - max 2000px on longest side, preserve aspect ratio
+              sharp -i "$file" -o "images/portfolio/optimized/full/${name}.jpg" resize 2000 2000 --fit inside --format jpeg --quality 92
+
+              # WebP version
+              sharp -i "$file" -o "images/portfolio/optimized/full/${name}.webp" resize 2000 2000 --fit inside --format webp --quality 88
             fi
           done
 

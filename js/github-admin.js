@@ -386,8 +386,10 @@ class GitHubPortfolioAdmin {
                 // Create photo data for portfolio.json
                 uploadedPhotos.push({
                     id: image.id,
-                    url: `images/portfolio/optimized/medium/${image.fileName.replace(/\.[^/.]+$/, '.webp')}`, // Use optimized WebP
-                    fallbackUrl: `images/portfolio/optimized/medium/${image.fileName.replace(/\.[^/.]+$/, '.jpg')}`, // JPEG fallback
+                    url: `images/portfolio/optimized/medium/${image.fileName.replace(/\.[^/.]+$/, '.webp')}`, // Use optimized WebP for thumbnails
+                    fallbackUrl: `images/portfolio/optimized/medium/${image.fileName.replace(/\.[^/.]+$/, '.jpg')}`, // JPEG fallback for thumbnails
+                    fullUrl: `images/portfolio/optimized/full/${image.fileName.replace(/\.[^/.]+$/, '.webp')}`, // Full resolution for lightbox
+                    fullFallbackUrl: `images/portfolio/optimized/full/${image.fileName.replace(/\.[^/.]+$/, '.jpg')}`, // Full resolution JPEG fallback
                     category: image.category,
                     altText: image.altText || image.originalName,
                     uploadDate: image.uploadDate,
