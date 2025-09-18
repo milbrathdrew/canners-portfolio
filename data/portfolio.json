@@ -57,17 +57,6 @@
       "altText": "knife fight",
       "uploadDate": "2025-09-18",
       "originalName": "6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter.jpg"
-    },
-    {
-      "id": "photo_1758234347079_fo4sp9jl8",
-      "url": "images/portfolio/optimized/medium/bg3_exploration_1758234347079.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/bg3_exploration_1758234347079.jpg",
-      "fullUrl": "images/portfolio/optimized/full/bg3_exploration_1758234347079.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/bg3_exploration_1758234347079.jpg",
-      "category": "nature",
-      "altText": "out in the wild",
-      "uploadDate": "2025-09-18",
-      "originalName": "BG3_Exploration.png"
     }
   ],
   "categories": [
@@ -102,5 +91,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T22:26:30.368Z"
+  "lastUpdated": "2025-09-18T22:26:54.717Z"
 }
