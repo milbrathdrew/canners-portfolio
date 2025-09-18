@@ -35,6 +35,17 @@
       "altText": "its a rocky terrain",
       "uploadDate": "2025-09-18",
       "originalName": "rocky_terrain.jpg"
+    },
+    {
+      "id": "photo_1758227837636_xneomx7at",
+      "url": "images/portfolio/optimized/medium/zwon_1758227837636.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/zwon_1758227837636.jpg",
+      "fullUrl": "images/portfolio/optimized/full/zwon_1758227837636.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/zwon_1758227837636.jpg",
+      "category": "street",
+      "altText": "zwon train tag",
+      "uploadDate": "2025-09-18",
+      "originalName": "zwon.jpg"
     }
   ],
   "categories": [
@@ -69,5 +80,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T20:37:10.974Z"
+  "lastUpdated": "2025-09-18T20:37:31.558Z"
 }
