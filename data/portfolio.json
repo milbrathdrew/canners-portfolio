@@ -28,15 +28,6 @@
       "originalName": "buildingOnFilm.jpg"
     },
     {
-      "id": "photo_1758224971752_dmtklnw7y",
-      "url": "images/portfolio/optimized/medium/zwon_1758224971752.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/zwon_1758224971752.jpg",
-      "category": "street",
-      "altText": "zwon tag",
-      "uploadDate": "2025-09-18",
-      "originalName": "zwon.jpg"
-    },
-    {
       "id": "photo_1758225369000_2fqlpc9sq",
       "url": "images/portfolio/optimized/medium/rocky_terrain_1758225369000.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/rocky_terrain_1758225369000.jpg",
@@ -78,5 +69,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:56:21.744Z"
+  "lastUpdated": "2025-09-18T20:34:53.358Z"
 }
