@@ -35,6 +35,17 @@
       "altText": "its a rocky terrain",
       "uploadDate": "2025-09-18",
       "originalName": "rocky_terrain.jpg"
+    },
+    {
+      "id": "photo_1758227701242_idk3fsqk8",
+      "url": "images/portfolio/optimized/medium/zwon_1758227701242.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/zwon_1758227701242.jpg",
+      "fullUrl": "images/portfolio/optimized/full/zwon_1758227701242.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/zwon_1758227701242.jpg",
+      "category": "street",
+      "altText": "zwon.webp",
+      "uploadDate": "2025-09-18",
+      "originalName": "zwon.webp"
     }
   ],
   "categories": [
@@ -69,5 +80,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T20:34:53.358Z"
+  "lastUpdated": "2025-09-18T20:35:09.564Z"
 }
