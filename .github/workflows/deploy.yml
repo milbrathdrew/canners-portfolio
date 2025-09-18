@@ -2,7 +2,7 @@ name: Optimize and Deploy Portfolio
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, media ]  # Process both main and media branches
     paths:
       - 'data/portfolio.json'
       - 'images/portfolio/**'
