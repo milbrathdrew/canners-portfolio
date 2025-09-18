@@ -129,7 +129,7 @@ class GitHubPortfolioAdmin {
                         <div class="photo-name">${photo.originalName}</div>
                         <div class="photo-alt">Alt: ${photo.altText}</div>
                         <div class="photo-date">Uploaded: ${photo.uploadDate}</div>
-                        <button onclick="githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>
+                        <button onclick="window.githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>
                     </div>
                 `;
                 categoryContainer.appendChild(photoDiv);
@@ -611,5 +611,6 @@ class GitHubPortfolioAdmin {
 let githubAdmin;
 document.addEventListener('DOMContentLoaded', () => {
     githubAdmin = new GitHubPortfolioAdmin();
+    window.githubAdmin = githubAdmin; // Make globally accessible
     console.log('GitHub Portfolio Admin initialized with photo removal capability');
 });
