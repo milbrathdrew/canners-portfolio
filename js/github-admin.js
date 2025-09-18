@@ -611,4 +611,5 @@ class GitHubPortfolioAdmin {
 let githubAdmin;
 document.addEventListener('DOMContentLoaded', () => {
     githubAdmin = new GitHubPortfolioAdmin();
+    console.log('GitHub Portfolio Admin initialized with photo removal capability');
 });
