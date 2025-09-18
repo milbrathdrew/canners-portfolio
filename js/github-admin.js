@@ -513,17 +513,53 @@ class GitHubPortfolioAdmin {
             <div class="success-message">
                 <h4>✅ Portfolio Published Successfully!</h4>
                 <p>Your photos have been uploaded to GitHub and will be automatically optimized and deployed.</p>
+
+                <div class="upload-status">
+                    <div class="status-item">
+                        <span class="status-icon">✅</span>
+                        <span>Photos uploaded to GitHub</span>
+                    </div>
+                    <div class="status-item pending" id="optimization-status">
+                        <span class="status-icon">⏳</span>
+                        <span>Image optimization in progress...</span>
+                    </div>
+                    <div class="status-item pending" id="deployment-status">
+                        <span class="status-icon">⏳</span>
+                        <span>Website deployment pending...</span>
+                    </div>
+                </div>
+
+                <div class="admin-links">
+                    <h5>📊 Monitor Progress:</h5>
+                    <div class="link-buttons">
+                        <a href="https://github.com/${this.githubConfig.owner}/${this.githubConfig.repo}/actions" target="_blank" class="admin-link">
+                            📋 GitHub Actions
+                        </a>
+                        <a href="https://dash.cloudflare.com/a050f67e02b29b846e5ac8f9d3c05570/pages/view/canners-portfolio" target="_blank" class="admin-link">
+                            🌐 Cloudflare Dashboard
+                        </a>
+                        <a href="https://github.com/${this.githubConfig.owner}/${this.githubConfig.repo}" target="_blank" class="admin-link">
+                            💾 Repository
+                        </a>
+                        <a href="https://canners-portfolio.pages.dev/portfolio.html" target="_blank" class="admin-link">
+                            🎨 Live Portfolio
+                        </a>
+                    </div>
+                </div>
+
                 <div class="success-details">
-                    <p><strong>What happens next:</strong></p>
+                    <p><strong>Expected Timeline:</strong></p>
                     <ul>
-                        <li>GitHub Actions will optimize your images (2-3 minutes)</li>
-                        <li>Your website will automatically update</li>
-                        <li>Photos will be available in WebP and JPEG formats</li>
+                        <li><strong>2-3 minutes:</strong> GitHub Actions optimizes images</li>
+                        <li><strong>1-2 minutes:</strong> Cloudflare deploys automatically</li>
+                        <li><strong>Total:</strong> 3-5 minutes until live</li>
                     </ul>
-                    <p>Check your <a href="https://github.com/${this.githubConfig.owner}/${this.githubConfig.repo}/actions" target="_blank">GitHub Actions</a> for deployment status.</p>
                 </div>
             </div>
         `;
+
+        // Start monitoring the optimization process
+        this.monitorOptimization();
 
         // Clear uploaded images
         this.uploadedImages = [];
@@ -597,6 +633,77 @@ class GitHubPortfolioAdmin {
             console.error('Remove photo failed:', error);
             this.showStatus('publishStatus', `Failed to remove photo: ${error.message}`, 'error');
         }
+    }
+
+    // Monitor optimization and deployment progress
+    async monitorOptimization() {
+        const checkInterval = 15000; // Check every 15 seconds
+        const maxChecks = 20; // Stop after 5 minutes
+        let checks = 0;
+
+        const checkProgress = async () => {
+            if (checks >= maxChecks) return;
+            checks++;
+
+            try {
+                // Check GitHub Actions
+                const actionsUrl = `https://api.github.com/repos/${this.githubConfig.owner}/${this.githubConfig.repo}/actions/runs?per_page=1`;
+                const actionsResponse = await fetch(actionsUrl, {
+                    headers: {
+                        'Authorization': `token ${this.githubConfig.token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (actionsResponse.ok) {
+                    const actionsData = await actionsResponse.json();
+                    if (actionsData.workflow_runs.length > 0) {
+                        const latestRun = actionsData.workflow_runs[0];
+
+                        const optimizationStatus = document.getElementById('optimization-status');
+                        const deploymentStatus = document.getElementById('deployment-status');
+
+                        if (latestRun.status === 'completed') {
+                            if (latestRun.conclusion === 'success') {
+                                if (optimizationStatus) {
+                                    optimizationStatus.className = 'status-item completed';
+                                    optimizationStatus.innerHTML = `
+                                        <span class="status-icon">✅</span>
+                                        <span>Image optimization completed!</span>
+                                    `;
+                                }
+                                if (deploymentStatus) {
+                                    deploymentStatus.className = 'status-item completed';
+                                    deploymentStatus.innerHTML = `
+                                        <span class="status-icon">✅</span>
+                                        <span>Website deployed! Changes are live.</span>
+                                    `;
+                                }
+                                return; // Stop monitoring
+                            } else {
+                                if (optimizationStatus) {
+                                    optimizationStatus.className = 'status-item error';
+                                    optimizationStatus.innerHTML = `
+                                        <span class="status-icon">❌</span>
+                                        <span>Optimization failed - check GitHub Actions</span>
+                                    `;
+                                }
+                                return; // Stop monitoring
+                            }
+                        }
+                    }
+                }
+
+                // Continue monitoring
+                setTimeout(checkProgress, checkInterval);
+            } catch (error) {
+                console.log('Monitoring error:', error);
+                setTimeout(checkProgress, checkInterval);
+            }
+        };
+
+        // Start monitoring after a brief delay
+        setTimeout(checkProgress, 10000); // Wait 10 seconds before first check
     }
 
     // Show status message
