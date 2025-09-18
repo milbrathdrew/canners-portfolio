@@ -1,15 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758216171641_j9tedu5rm",
-      "url": "images/portfolio/optimized/medium/screenshot_2025-09-10_at_12.43.47_pm_1758216171641.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/screenshot_2025-09-10_at_12.43.47_pm_1758216171641.jpg",
-      "category": "textures",
-      "altText": "maroon dream",
-      "uploadDate": "2025-09-18",
-      "originalName": "Screenshot 2025-09-10 at 12.43.47 PM.png"
-    },
-    {
       "id": "photo_1758222749922_c5gp0wgcx",
       "url": "images/portfolio/optimized/medium/knight_helmet_1758222749922.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758222749922.jpg",
@@ -60,5 +51,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:31:08.801Z"
+  "lastUpdated": "2025-09-18T19:31:11.448Z"
 }
