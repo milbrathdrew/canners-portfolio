@@ -1,21 +1,13 @@
 {
   "photos": [
     {
-      "id": "example_1",
-      "url": "https://res.cloudinary.com/dcmiwur5s/image/upload/w_800,f_auto,q_auto,c_fill/placeholder",
-      "category": "textures",
-      "altText": "Example texture photography",
-      "uploadDate": "2024-09-18",
-      "originalName": "example.jpg"
-    },
-    {
       "id": "photo_1758216171641_j9tedu5rm",
       "url": "images/portfolio/optimized/medium/screenshot_2025-09-10_at_12.43.47_pm_1758216171641.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/screenshot_2025-09-10_at_12.43.47_pm_1758216171641.jpg",
       "category": "textures",
       "altText": "maroon dream",
       "uploadDate": "2025-09-18",
-      "originalName": "Screenshot 2025-09-10 at 12.43.47 PM.png"
+      "originalName": "Screenshot 2025-09-10 at 12.43.47 PM.png"
     }
   ],
   "categories": [
