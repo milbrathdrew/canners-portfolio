@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -6,10 +9,11 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Space Mono', monospace;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    margin: 0;
 }
 
 .container {
@@ -18,20 +22,32 @@ body {
     padding: 0 20px;
 }
 
-/* Header styles */
+/* Main content area */
+main {
+    margin-left: 250px;
+    flex: 1;
+}
+
+/* Sidebar styles */
 header {
     background-color: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
+    border-right: 1px solid #eee;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
     z-index: 100;
+    overflow-y: auto;
 }
 
 header .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 30px 20px;
+    max-width: none;
+    margin: 0;
 }
 
 .logo {
@@ -41,15 +57,18 @@ header .container {
 }
 
 .logo h1 {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 2px;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .main-nav a {
@@ -74,8 +93,9 @@ header .container {
 }
 
 .hero h2 {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 48px;
-    font-weight: 300;
+    font-weight: 700;
     margin-bottom: 20px;
     color: #333;
 }
@@ -93,8 +113,9 @@ header .container {
 }
 
 .portfolio h2 {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 36px;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -161,8 +182,9 @@ header .container {
 }
 
 .shop h2 {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 36px;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -219,6 +241,7 @@ header .container {
 }
 
 .add-to-cart {
+    font-family: 'Merchant Copy', Arial, sans-serif;
     background-color: #333;
     color: #fff;
     border: none;
@@ -240,8 +263,9 @@ header .container {
 }
 
 .contact h2 {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 36px;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -298,6 +322,7 @@ header .container {
 }
 
 .submit-btn {
+    font-family: 'Merchant Copy', Arial, sans-serif;
     background-color: #333;
     color: #fff;
     border: none;
@@ -348,6 +373,27 @@ header .container {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    header .container {
+        padding: 20px;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
     .hero h2 {
         font-size: 36px;
     }
@@ -357,9 +403,9 @@ header .container {
     }
     
     .main-nav ul {
-        gap: 20px;
+        gap: 12px;
     }
-    
+
     .category-nav ul {
         gap: 10px;
     }

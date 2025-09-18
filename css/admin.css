@@ -1,0 +1,488 @@
+/* Admin Interface Styles */
+
+.admin {
+    padding: 60px 0;
+}
+
+.admin h2 {
+    font-family: 'Merchant Copy Wide', 'Merchant Copy', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admin-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Configuration Section */
+.config-section {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.config-section h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Space Mono', monospace;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-family: 'Space Mono', monospace;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.config-btn {
+    font-family: 'Space Mono', monospace;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.config-btn:hover {
+    background-color: #555;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-bottom: 40px;
+}
+
+.upload-section h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.drop-zone {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 60px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #fafafa;
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+    border-color: #333;
+    background: #f0f0f0;
+}
+
+.drop-content svg {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.drop-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    font-family: 'Space Mono', monospace;
+}
+
+.browse-link {
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.browse-link:hover {
+    color: #555;
+}
+
+.drop-content small {
+    color: #999;
+    font-size: 12px;
+}
+
+/* Upload Progress */
+.upload-progress {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #333;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Space Mono', monospace;
+}
+
+/* Images Section */
+.images-section h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.images-list {
+    margin-bottom: 30px;
+}
+
+.image-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.image-preview {
+    flex-shrink: 0;
+}
+
+.image-preview img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.image-details {
+    flex: 1;
+}
+
+.image-name {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: 'Space Mono', monospace;
+}
+
+.image-details .form-group {
+    margin-bottom: 15px;
+}
+
+.remove-btn {
+    font-family: 'Space Mono', monospace;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.remove-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.generate-btn,
+.clear-btn {
+    font-family: 'Space Mono', monospace;
+    border: none;
+    padding: 15px 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.generate-btn {
+    background-color: #2e7d32;
+    color: #fff;
+}
+
+.generate-btn:hover {
+    background-color: #1b5e20;
+}
+
+.clear-btn {
+    background-color: #666;
+    color: #fff;
+}
+
+.clear-btn:hover {
+    background-color: #555;
+}
+
+/* Portfolio Update Section */
+.code-section h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.code-container {
+    position: relative;
+}
+
+.success-message {
+    background: #e8f5e8;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.success-message h4 {
+    font-family: 'Space Mono', monospace;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.success-message p {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-family: 'Space Mono', monospace;
+}
+
+.download-container {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.download-link {
+    font-family: 'Space Mono', monospace;
+    background-color: #2e7d32;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #1b5e20;
+}
+
+.instructions {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    font-family: 'Space Mono', monospace;
+}
+
+.instructions strong {
+    color: #333;
+}
+
+/* Current Photos Section */
+.current-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.current-section h3 {
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.current-photos-list {
+    display: grid;
+    gap: 15px;
+}
+
+.current-photo-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.current-photo-item .photo-preview img {
+    border-radius: 4px;
+}
+
+.current-photo-item .photo-details {
+    flex: 1;
+}
+
+.current-photo-item .photo-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Space Mono', monospace;
+}
+
+.current-photo-item .photo-category,
+.current-photo-item .photo-alt {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+/* Publish Section */
+.publish-section {
+    margin-top: 30px;
+}
+
+.publish-section h3 {
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.success-details {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.success-details ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.success-details li {
+    margin-bottom: 5px;
+    color: #2e7d32;
+}
+
+.success-details a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.success-details a:hover {
+    text-decoration: underline;
+}
+
+/* Status Messages */
+.status-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Space Mono', monospace;
+}
+
+.status-message.success {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.status-message.error {
+    background-color: #ffeaea;
+    color: #d32f2f;
+    border: 1px solid #ffcdd2;
+}
+
+.status-message.info {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-content {
+        padding: 0 15px;
+    }
+
+    .config-section {
+        padding: 20px;
+    }
+
+    .drop-zone {
+        padding: 40px 20px;
+    }
+
+    .image-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-preview img {
+        width: 100%;
+        max-width: 200px;
+        height: 200px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .generate-btn,
+    .clear-btn {
+        width: 100%;
+    }
+}

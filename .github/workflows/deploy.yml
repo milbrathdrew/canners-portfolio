@@ -1,0 +1,100 @@
+name: Optimize and Deploy Portfolio
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/portfolio.json'
+      - 'images/portfolio/**'
+  workflow_dispatch:
+
+jobs:
+  optimize-images:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install Sharp CLI
+      run: npm install -g sharp-cli
+
+    - name: Optimize images
+      run: |
+        # Create optimized image directories
+        mkdir -p images/portfolio/optimized/small
+        mkdir -p images/portfolio/optimized/medium
+        mkdir -p images/portfolio/optimized/large
+
+        # Optimize images in different sizes if portfolio images exist
+        if [ -d "images/portfolio/original" ] && [ "$(ls -A images/portfolio/original 2>/dev/null)" ]; then
+          echo "🖼️ Optimizing images..."
+
+          # Small thumbnails (400px)
+          for file in images/portfolio/original/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
+            if [ -f "$file" ]; then
+              filename=$(basename "$file")
+              name="${filename%.*}"
+              echo "Creating small versions of $filename"
+
+              # JPEG optimization
+              sharp -i "$file" -o "images/portfolio/optimized/small/${name}.jpg" resize 400 400 --fit cover --format jpeg --quality 85
+
+              # WebP version
+              sharp -i "$file" -o "images/portfolio/optimized/small/${name}.webp" resize 400 400 --fit cover --format webp --quality 80
+            fi
+          done
+
+          # Medium size (800px)
+          for file in images/portfolio/original/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
+            if [ -f "$file" ]; then
+              filename=$(basename "$file")
+              name="${filename%.*}"
+              echo "Creating medium versions of $filename"
+
+              # JPEG optimization
+              sharp -i "$file" -o "images/portfolio/optimized/medium/${name}.jpg" resize 800 800 --fit cover --format jpeg --quality 85
+
+              # WebP version
+              sharp -i "$file" -o "images/portfolio/optimized/medium/${name}.webp" resize 800 800 --fit cover --format webp --quality 80
+            fi
+          done
+
+          # Large size (1200px)
+          for file in images/portfolio/original/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
+            if [ -f "$file" ]; then
+              filename=$(basename "$file")
+              name="${filename%.*}"
+              echo "Creating large versions of $filename"
+
+              # JPEG optimization
+              sharp -i "$file" -o "images/portfolio/optimized/large/${name}.jpg" resize 1200 1200 --fit cover --format jpeg --quality 90
+
+              # WebP version
+              sharp -i "$file" -o "images/portfolio/optimized/large/${name}.webp" resize 1200 1200 --fit cover --format webp --quality 85
+            fi
+          done
+
+          echo "✅ Image optimization complete"
+        else
+          echo "No images to optimize"
+        fi
+
+    - name: Commit optimized images
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add images/portfolio/optimized/ || true
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🖼️ Auto-optimize portfolio images" || echo "Commit failed, but continuing"
+          git push || echo "Push failed, but continuing"
+        fi

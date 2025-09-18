@@ -1,0 +1,21 @@
+{
+  "photos": [
+    {
+      "id": "example_1",
+      "url": "https://res.cloudinary.com/dcmiwur5s/image/upload/w_800,f_auto,q_auto,c_fill/placeholder",
+      "category": "textures",
+      "altText": "Example texture photography",
+      "uploadDate": "2024-09-18",
+      "originalName": "example.jpg"
+    }
+  ],
+  "categories": [
+    { "id": "all", "name": "All", "active": true },
+    { "id": "textures", "name": "Textures", "active": false },
+    { "id": "products", "name": "Products", "active": false },
+    { "id": "street", "name": "Street", "active": false },
+    { "id": "film", "name": "Film", "active": false },
+    { "id": "nature", "name": "Nature", "active": false }
+  ],
+  "lastUpdated": "2024-09-18T12:00:00Z"
+}

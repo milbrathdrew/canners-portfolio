@@ -1,0 +1,31 @@
+# Cloudflare Pages Headers Configuration
+# Optimizes caching and performance for the portfolio
+
+# Cache static assets for a long time
+/css/*
+  Cache-Control: max-age=31536000, immutable
+
+/js/*
+  Cache-Control: max-age=31536000, immutable
+
+/images/*
+  Cache-Control: max-age=31536000, immutable
+
+# Cache HTML files for a shorter time to allow updates
+/*.html
+  Cache-Control: max-age=3600
+
+# Cache portfolio.json for a short time
+/data/portfolio.json
+  Cache-Control: max-age=300
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Enable compression
+/*
+  Content-Encoding: gzip
