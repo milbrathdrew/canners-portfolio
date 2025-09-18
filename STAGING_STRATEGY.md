@@ -53,35 +53,27 @@ uploads → media branch → GitHub Actions → deploy to main
 - Complex branch management
 - Potential merge conflicts
 
-## Implemented Approach: Option 3 (Dedicated Media Branch)
+## Approach: Direct Main Branch Uploads
 
-**Status: ✅ IMPLEMENTING** - Using `media` branch for all photo uploads
+**Status: ✅ ACTIVE** - Using `main` branch for all uploads (simplified approach)
 
-### Media Branch Implementation:
+### Simplified Direct Upload:
 
 #### Workflow:
-1. **Admin uploads** → `media` branch (all photo commits)
-2. **GitHub Actions** → optimize images in `media` branch
-3. **Periodic merges** → `media` branch → `main` branch (clean history)
-4. **Deployments** → `main` branch only (production)
-
-#### Technical Changes:
-- ✅ Created `media` branch for all photo operations
-- 🔄 Modify admin interface to target `media` branch
-- 🔄 Update GitHub Actions to work with `media` branch
-- 🔄 Add merge workflow from `media` to `main`
-- 🔄 Configure Cloudflare Pages to deploy from `main` only
+1. **Admin uploads** → `main` branch (direct to production)
+2. **GitHub Actions** → optimize images automatically
+3. **Deployments** → automatic via Cloudflare Pages
 
 #### Benefits:
-- 🎯 **Clean main branch** - no photo upload noise
-- 🎯 **Isolated media workflow** - all photo operations in `media`
-- 🎯 **Controlled deployments** - merge to `main` when ready
-- 🎯 **Better git history** - main branch for features, media for content
+- 🎯 **Simple workflow** - no branch management complexity
+- 🎯 **Immediate deployment** - changes go live automatically
+- 🎯 **Single source of truth** - main branch is always current
+- 🎯 **No merge conflicts** - eliminates staging branch issues
 
-#### Implementation Phases:
-1. **Phase 1: ✅ Branch Setup** - Create and configure `media` branch
-2. **Phase 2: 🔄 Admin Targeting** - Update admin to use `media` branch
-3. **Phase 3: 🔄 Actions Update** - Configure GitHub Actions for `media`
-4. **Phase 4: 🔄 Merge Workflow** - Implement periodic `media` → `main` merges
+#### Implementation:
+- ✅ Admin interface targets main branch
+- ✅ GitHub Actions process main branch only
+- ✅ Direct deployment to production
+- ✅ Simplified user experience
 
 This approach balances clean git history with immediate deployment needs.
