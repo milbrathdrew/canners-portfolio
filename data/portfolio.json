@@ -26,6 +26,15 @@
       "altText": "knights",
       "uploadDate": "2025-09-18",
       "originalName": "knight helmet.jpg"
+    },
+    {
+      "id": "photo_1758223528529_diku17rrp",
+      "url": "images/portfolio/optimized/medium/1_04f4ac7e-c9ef-4084-afcf-ac64ba30c0f4_1267x1267_crop_center_1758223528529.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/1_04f4ac7e-c9ef-4084-afcf-ac64ba30c0f4_1267x1267_crop_center_1758223528529.jpg",
+      "category": "products",
+      "altText": "cute pan",
+      "uploadDate": "2025-09-18",
+      "originalName": "1_04f4ac7e-c9ef-4084-afcf-ac64ba30c0f4_1267x1267_crop_center.webp"
     }
   ],
   "categories": [
@@ -60,5 +69,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:12:39.027Z"
+  "lastUpdated": "2025-09-18T19:25:40.951Z"
 }
