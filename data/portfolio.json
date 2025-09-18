@@ -26,6 +26,24 @@
       "altText": "its a building i like",
       "uploadDate": "2025-09-18",
       "originalName": "buildingOnFilm.jpg"
+    },
+    {
+      "id": "photo_1758224971748_g8tcmm3u7",
+      "url": "images/portfolio/optimized/medium/rocky_terrain_1758224971748.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/rocky_terrain_1758224971748.jpg",
+      "category": "nature",
+      "altText": "its a rocky terrain",
+      "uploadDate": "2025-09-18",
+      "originalName": "rocky_terrain.jpg"
+    },
+    {
+      "id": "photo_1758224971752_dmtklnw7y",
+      "url": "images/portfolio/optimized/medium/zwon_1758224971752.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/zwon_1758224971752.jpg",
+      "category": "street",
+      "altText": "zwon tag",
+      "uploadDate": "2025-09-18",
+      "originalName": "zwon.jpg"
     }
   ],
   "categories": [
@@ -60,5 +78,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:48:06.215Z"
+  "lastUpdated": "2025-09-18T19:49:50.641Z"
 }
