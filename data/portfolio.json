@@ -1,5 +1,51 @@
 {
-  "photos": [],
+  "photos": [
+    {
+      "id": "photo_1758223917531_hgfe5735v",
+      "url": "images/portfolio/optimized/medium/castlewall_1758223917531.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/castlewall_1758223917531.jpg",
+      "category": "nature",
+      "altText": "baldurs gate 3",
+      "uploadDate": "2025-09-18",
+      "originalName": "castleWall.png"
+    },
+    {
+      "id": "photo_1758223926753_70ias5dzh",
+      "url": "images/portfolio/optimized/medium/knight_helmet_1758223926753.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758223926753.jpg",
+      "category": "products",
+      "altText": "knight night",
+      "uploadDate": "2025-09-18",
+      "originalName": "knight helmet.jpg"
+    },
+    {
+      "id": "photo_1758224037748_5tkyiziq7",
+      "url": "images/portfolio/optimized/medium/rocky_terrain_1758224037748.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/rocky_terrain_1758224037748.jpg",
+      "category": "textures",
+      "altText": "it has rocks and texture",
+      "uploadDate": "2025-09-18",
+      "originalName": "rocky_terrain.webp"
+    },
+    {
+      "id": "photo_1758224121745_o6e1ue7fy",
+      "url": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.jpg",
+      "category": "film",
+      "altText": "its a building i like",
+      "uploadDate": "2025-09-18",
+      "originalName": "buildingOnFilm.jpg"
+    },
+    {
+      "id": "photo_1758224177772_py5sc1pei",
+      "url": "images/portfolio/optimized/medium/zwontag_1758224177772.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/zwontag_1758224177772.jpg",
+      "category": "all",
+      "altText": "huge tag from the train",
+      "uploadDate": "2025-09-18",
+      "originalName": "zwonTag.webp"
+    }
+  ],
   "categories": [
     {
       "id": "all",
@@ -32,5 +78,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:31:18.388Z"
+  "lastUpdated": "2025-09-18T19:37:09.021Z"
 }
