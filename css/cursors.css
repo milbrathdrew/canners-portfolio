@@ -1,0 +1,125 @@
+/* Custom Cursor Implementation */
+
+/* Default cursor for clickable elements */
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.clickable,
+.browse-link,
+.category-link,
+.admin-link,
+.logo,
+.remove-btn,
+.config-btn,
+.generate-btn,
+.clear-btn,
+.gallery-item,
+.current-photo-item {
+    cursor: url('../cursor_shiny.png'), pointer !important;
+}
+
+/* Hover state for clickable elements */
+a:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.clickable:hover,
+.browse-link:hover,
+.category-link:hover,
+.admin-link:hover,
+.logo:hover,
+.remove-btn:hover,
+.config-btn:hover,
+.generate-btn:hover,
+.clear-btn:hover,
+.gallery-item:hover,
+.current-photo-item:hover {
+    cursor: url('../cursor_final.png'), pointer !important;
+}
+
+/* Navigation specific */
+.main-nav a,
+.category-nav a {
+    cursor: url('../cursor_shiny.png'), pointer !important;
+}
+
+.main-nav a:hover,
+.category-nav a:hover {
+    cursor: url('../cursor_final.png'), pointer !important;
+}
+
+/* Form elements */
+select,
+option {
+    cursor: url('../cursor_shiny.png'), pointer !important;
+}
+
+select:hover,
+option:hover {
+    cursor: url('../cursor_final.png'), pointer !important;
+}
+
+/* Drop zone and upload areas */
+.drop-zone,
+#dropZone {
+    cursor: url('../cursor_shiny.png'), copy !important;
+}
+
+.drop-zone:hover,
+#dropZone:hover {
+    cursor: url('../cursor_final.png'), copy !important;
+}
+
+/* Gallery images with special interaction */
+.gallery img {
+    cursor: url('../cursor_shiny.png'), zoom-in !important;
+}
+
+.gallery img:hover {
+    cursor: url('../cursor_final.png'), zoom-in !important;
+}
+
+/* Admin interface specific elements */
+.current-photos-list .current-photo-item {
+    cursor: url('../cursor_shiny.png'), pointer !important;
+}
+
+.current-photos-list .current-photo-item:hover {
+    cursor: url('../cursor_final.png'), pointer !important;
+}
+
+/* Progress and status elements (non-clickable but interactive) */
+.progress-bar,
+.upload-progress {
+    cursor: url('../cursor_shiny.png'), progress !important;
+}
+
+/* Disabled states maintain shiny cursor but no hover effect */
+button:disabled,
+input:disabled,
+select:disabled {
+    cursor: url('../cursor_shiny.png'), not-allowed !important;
+}
+
+/* Text inputs keep default text cursor */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    cursor: text !important;
+}
+
+/* File input hidden but area should be clickable */
+input[type="file"] {
+    cursor: url('../cursor_shiny.png'), pointer !important;
+}
+
+/* Special states for admin workflow */
+.publishing,
+.optimizing,
+.loading {
+    cursor: url('../cursor_shiny.png'), wait !important;
+}
