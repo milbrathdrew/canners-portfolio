@@ -1,4 +1,3 @@
 # Cloudflare Pages Redirects Configuration
 
-# Admin redirect only (for convenience)
-/admin  /admin.html  200
+# No redirects to avoid loops - use full filenames
