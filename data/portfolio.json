@@ -19,15 +19,6 @@
       "originalName": "knight helmet.jpg"
     },
     {
-      "id": "photo_1758224037748_5tkyiziq7",
-      "url": "images/portfolio/optimized/medium/rocky_terrain_1758224037748.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/rocky_terrain_1758224037748.jpg",
-      "category": "textures",
-      "altText": "it has rocks and texture",
-      "uploadDate": "2025-09-18",
-      "originalName": "rocky_terrain.webp"
-    },
-    {
       "id": "photo_1758224121745_o6e1ue7fy",
       "url": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.jpg",
@@ -78,5 +69,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T19:37:09.021Z"
+  "lastUpdated": "2025-09-18T19:48:01.234Z"
 }
