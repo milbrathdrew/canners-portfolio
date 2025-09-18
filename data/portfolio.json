@@ -1,12 +1,46 @@
 {
-  "photos": [],
-  "categories": [
-    { "id": "all", "name": "All", "active": true },
-    { "id": "nature", "name": "Nature", "active": false },
-    { "id": "street", "name": "Street", "active": false },
-    { "id": "textures", "name": "Textures", "active": false },
-    { "id": "products", "name": "Products", "active": false },
-    { "id": "film", "name": "Film", "active": false }
+  "photos": [
+    {
+      "id": "photo_1758216171641_j9tedu5rm",
+      "url": "images/portfolio/optimized/medium/screenshot_2025-09-10_at_12.43.47_pm_1758216171641.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/screenshot_2025-09-10_at_12.43.47_pm_1758216171641.jpg",
+      "category": "textures",
+      "altText": "maroon dream",
+      "uploadDate": "2025-09-18",
+      "originalName": "Screenshot 2025-09-10 at 12.43.47 PM.png"
+    }
   ],
-  "lastUpdated": "2024-09-18T12:00:00Z"
+  "categories": [
+    {
+      "id": "all",
+      "name": "All",
+      "active": true
+    },
+    {
+      "id": "nature",
+      "name": "Nature",
+      "active": false
+    },
+    {
+      "id": "street",
+      "name": "Street",
+      "active": false
+    },
+    {
+      "id": "textures",
+      "name": "Textures",
+      "active": false
+    },
+    {
+      "id": "products",
+      "name": "Products",
+      "active": false
+    },
+    {
+      "id": "film",
+      "name": "Film",
+      "active": false
+    }
+  ],
+  "lastUpdated": "2025-09-18T17:23:00.778Z"
 }
