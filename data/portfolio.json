@@ -8,6 +8,15 @@
       "altText": "maroon dream",
       "uploadDate": "2025-09-18",
       "originalName": "Screenshot 2025-09-10 at 12.43.47 PM.png"
+    },
+    {
+      "id": "photo_1758217199928_m8wkcamqw",
+      "url": "images/portfolio/optimized/medium/1320705_1758217199929.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/1320705_1758217199929.jpg",
+      "category": "nature",
+      "altText": "baldurs gate 3",
+      "uploadDate": "2025-09-18",
+      "originalName": "1320705.png"
     }
   ],
   "categories": [
@@ -42,5 +51,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T17:23:00.778Z"
+  "lastUpdated": "2025-09-18T17:40:30.183Z"
 }
