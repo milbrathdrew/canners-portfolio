@@ -1,15 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758223926753_70ias5dzh",
-      "url": "images/portfolio/optimized/medium/knight_helmet_1758223926753.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758223926753.jpg",
-      "category": "products",
-      "altText": "knight night",
-      "uploadDate": "2025-09-18",
-      "originalName": "knight helmet.jpg"
-    },
-    {
       "id": "photo_1758224121745_o6e1ue7fy",
       "url": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.jpg",
@@ -161,5 +152,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T16:58:15.591Z"
+  "lastUpdated": "2025-09-19T16:58:18.630Z"
 }
