@@ -59,17 +59,6 @@
       "originalName": "6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter.jpg"
     },
     {
-      "id": "photo_1758234424105_f2vxq6218",
-      "url": "images/portfolio/optimized/medium/bg3_party_1758234424105.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/bg3_party_1758234424105.jpg",
-      "fullUrl": "images/portfolio/optimized/full/bg3_party_1758234424105.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/bg3_party_1758234424105.jpg",
-      "category": "nature",
-      "altText": "exploring nature",
-      "uploadDate": "2025-09-18",
-      "originalName": "BG3_Party.png"
-    },
-    {
       "id": "photo_1758235878802_5m6dljzlp",
       "url": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758235878802.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758235878802.jpg",
@@ -124,5 +113,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T02:34:29.790Z"
+  "lastUpdated": "2025-09-19T02:36:05.766Z"
 }
