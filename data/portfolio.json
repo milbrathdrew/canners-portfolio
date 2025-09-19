@@ -1,15 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758223917531_hgfe5735v",
-      "url": "images/portfolio/optimized/medium/castlewall_1758223917531.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/castlewall_1758223917531.jpg",
-      "category": "nature",
-      "altText": "baldurs gate 3",
-      "uploadDate": "2025-09-18",
-      "originalName": "castleWall.png"
-    },
-    {
       "id": "photo_1758223926753_70ias5dzh",
       "url": "images/portfolio/optimized/medium/knight_helmet_1758223926753.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758223926753.jpg",
@@ -37,17 +28,6 @@
       "originalName": "rocky_terrain.jpg"
     },
     {
-      "id": "photo_1758227837636_xneomx7at",
-      "url": "images/portfolio/optimized/medium/zwon_1758227837636.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/zwon_1758227837636.jpg",
-      "fullUrl": "images/portfolio/optimized/full/zwon_1758227837636.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/zwon_1758227837636.jpg",
-      "category": "street",
-      "altText": "zwon train tag",
-      "uploadDate": "2025-09-18",
-      "originalName": "zwon.jpg"
-    },
-    {
       "id": "photo_1758233860984_0x9udtd9g",
       "url": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.jpg",
@@ -59,17 +39,6 @@
       "originalName": "6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter.jpg"
     },
     {
-      "id": "photo_1758234424105_f2vxq6218",
-      "url": "images/portfolio/optimized/medium/bg3_party_1758234424105.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/bg3_party_1758234424105.jpg",
-      "fullUrl": "images/portfolio/optimized/full/bg3_party_1758234424105.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/bg3_party_1758234424105.jpg",
-      "category": "nature",
-      "altText": "exploring nature",
-      "uploadDate": "2025-09-18",
-      "originalName": "BG3_Party.png"
-    },
-    {
       "id": "photo_1758235878802_5m6dljzlp",
       "url": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758235878802.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/texturelabs_atmosphere_126s_1758235878802.jpg",
@@ -79,6 +48,105 @@
       "altText": "solar plasma",
       "uploadDate": "2025-09-18",
       "originalName": "Texturelabs_Atmosphere_126S.jpg"
+    },
+    {
+      "id": "photo_1758250089524_gklr963sf",
+      "url": "images/portfolio/optimized/medium/portfolio-02_1758250089524.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-02_1758250089524.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-02_1758250089524.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-02_1758250089524.jpg",
+      "category": "nature",
+      "altText": "The first light of day spilling over Little Tahoma Peak. At 11,138 feet, this volcanic remnant is the third tallest peak in Mt. Rainier National Park. When hiking in the Sunrise quadrant of the park, I often find my gaze settling back on this silent sentinel, and this picture is a memory of the pure joy I felt the first time seeing it, and has since become an annual tradition of a hike.",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-02.jpg"
+    },
+    {
+      "id": "photo_1758251940476_h1pcvkowg",
+      "url": "images/portfolio/optimized/medium/portfolio-17_1758251940476.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-17_1758251940476.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-17_1758251940476.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-17_1758251940476.jpg",
+      "category": "nature",
+      "altText": "At 14,410 feet, Mount Rainier is the tallest peak in the contiguous U.S. With 25 named glaciers and 36 miles of permanent snow fields this active stratovolcano is one of the most dangerous in the cascade range. But to me, this mountain marks a pivotal moment in my life, and when I look east and see her towering in the skyline, I remember how far I've come from my small Midwest home town. I took this photo during an excitingly moody day on top of Third Burroughs Mountain at 7,828 feet. ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-17.jpg"
+    },
+    {
+      "id": "photo_1758251959780_ryql5p4w3",
+      "url": "images/portfolio/optimized/medium/portfolio-04_1758251959780.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-04_1758251959780.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-04_1758251959780.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-04_1758251959780.jpg",
+      "category": "nature",
+      "altText": "A little rainbow goes a long way for us on a hike, on this specific day, I almost couldn't believe how many rainbows had formed around us while making our way up the Second Burroughs Mountain. We had the trail to ourselves on this crisp October morning, always worth waking up for. ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-04.jpg"
+    },
+    {
+      "id": "photo_1758251965440_e8oysf59f",
+      "url": "images/portfolio/optimized/medium/portfolio-06_1758251965440.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-06_1758251965440.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-06_1758251965440.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-06_1758251965440.jpg",
+      "category": "street",
+      "altText": "I caught this shot just moments before a heavy fog swallowed the Puget Sound. At 5:35am, the world felt suspended in a dampened noise, thriving with the unmistakable Pacific Northwest atmosphere that I've come to love so dearly. ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-06.jpg"
+    },
+    {
+      "id": "photo_1758254978851_n7atwsq8m",
+      "url": "images/portfolio/optimized/medium/portfolio-05_1758254978851.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-05_1758254978851.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-05_1758254978851.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-05_1758254978851.jpg",
+      "category": "nature",
+      "altText": "Growing up to 2 feet in diameter, the Egg-Yolk Jelly has a very mild sting, so much so that it is not uncommon for these jellyfish to have crabs, small fish, or amphipods hitchhiking on or inside their bell. ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-05.jpg"
+    },
+    {
+      "id": "photo_1758254980739_jqu2pcdty",
+      "url": "images/portfolio/optimized/medium/portfolio-10_1758254980739.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-10_1758254980739.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-10_1758254980739.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-10_1758254980739.jpg",
+      "category": "street",
+      "altText": "This building appeared stuck in time, untouched by it owner, waiting for nothing. ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-10.jpg"
+    },
+    {
+      "id": "photo_1758254982606_xvxjz82ry",
+      "url": "images/portfolio/optimized/medium/portfolio-08_1758254982606.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-08_1758254982606.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-08_1758254982606.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-08_1758254982606.jpg",
+      "category": "street",
+      "altText": "An empty alley home to brick and bared windows. Like something out of a zombie survival, this area felt so forgotten.",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-08.jpg"
+    },
+    {
+      "id": "photo_1758254984851_zh4iwtdlm",
+      "url": "images/portfolio/optimized/medium/portfolio-07_1758254984851.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-07_1758254984851.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-07_1758254984851.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-07_1758254984851.jpg",
+      "category": "street",
+      "altText": "A rainy city night, and the luminance of a very lonely pair of vacuums. I had fun with the cyan and red in this shot.",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-07.jpg"
+    },
+    {
+      "id": "photo_1758255502146_co6ja4ff2",
+      "url": "images/portfolio/optimized/medium/portfolio-09_1758255502146.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-09_1758255502146.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-09_1758255502146.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-09_1758255502146.jpg",
+      "category": "street",
+      "altText": "One of my favorite spots in the city. Tucked under an old bridge, each artist covering spots of a once empty concrete canvas, only to be power washed away time and time again.  ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-09.jpg"
     }
   ],
   "categories": [
@@ -113,5 +181,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-18T22:51:28.917Z"
+  "lastUpdated": "2025-09-19T04:36:48.784Z"
 }
