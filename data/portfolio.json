@@ -1,15 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758224121745_o6e1ue7fy",
-      "url": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/buildingonfilm_1758224121745.jpg",
-      "category": "film",
-      "altText": "its a building i like",
-      "uploadDate": "2025-09-18",
-      "originalName": "buildingOnFilm.jpg"
-    },
-    {
       "id": "photo_1758250089524_gklr963sf",
       "url": "images/portfolio/optimized/medium/portfolio-02_1758250089524.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio-02_1758250089524.jpg",
@@ -141,5 +132,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T16:58:21.150Z"
+  "lastUpdated": "2025-09-19T16:58:23.144Z"
 }
