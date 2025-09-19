@@ -92,6 +92,61 @@
       "altText": "I caught this shot just moments before a heavy fog swallowed the Puget Sound. At 5:35am, the world felt suspended in a dampened noise, thriving with the unmistakable Pacific Northwest atmosphere that I've come to love so dearly. ",
       "uploadDate": "2025-09-19",
       "originalName": "portfolio-06.jpg"
+    },
+    {
+      "id": "photo_1758254978851_n7atwsq8m",
+      "url": "images/portfolio/optimized/medium/portfolio-05_1758254978851.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-05_1758254978851.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-05_1758254978851.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-05_1758254978851.jpg",
+      "category": "nature",
+      "altText": "Growing up to 2 feet in diameter, the Egg-Yolk Jelly has a very mild sting, so much so that it is not uncommon for these jellyfish to have crabs, small fish, or amphipods hitchhiking on or inside their bell. ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-05.jpg"
+    },
+    {
+      "id": "photo_1758254980739_jqu2pcdty",
+      "url": "images/portfolio/optimized/medium/portfolio-10_1758254980739.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-10_1758254980739.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-10_1758254980739.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-10_1758254980739.jpg",
+      "category": "street",
+      "altText": "This building appeared stuck in time, untouched by it owner, waiting for nothing. ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-10.jpg"
+    },
+    {
+      "id": "photo_1758254982606_xvxjz82ry",
+      "url": "images/portfolio/optimized/medium/portfolio-08_1758254982606.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-08_1758254982606.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-08_1758254982606.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-08_1758254982606.jpg",
+      "category": "street",
+      "altText": "An empty alley home to brick and bared windows. Like something out of a zombie survival, this area felt so forgotten.",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-08.jpg"
+    },
+    {
+      "id": "photo_1758254984851_zh4iwtdlm",
+      "url": "images/portfolio/optimized/medium/portfolio-07_1758254984851.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-07_1758254984851.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-07_1758254984851.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-07_1758254984851.jpg",
+      "category": "street",
+      "altText": "A rainy city night, and the luminance of a very lonely pair of vacuums. I had fun with the cyan and red in this shot.",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-07.jpg"
+    },
+    {
+      "id": "photo_1758255502146_co6ja4ff2",
+      "url": "images/portfolio/optimized/medium/portfolio-09_1758255502146.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-09_1758255502146.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-09_1758255502146.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-09_1758255502146.jpg",
+      "category": "street",
+      "altText": "One of my favorite spots in the city. Tucked under an old bridge, each artist covering spots of a once empty concrete canvas, only to be power washed away time and time again.  ",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-09.jpg"
     }
   ],
   "categories": [
@@ -126,5 +181,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T04:01:50.017Z"
+  "lastUpdated": "2025-09-19T04:36:48.784Z"
 }
