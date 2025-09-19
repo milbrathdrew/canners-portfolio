@@ -28,17 +28,6 @@
       "originalName": "rocky_terrain.jpg"
     },
     {
-      "id": "photo_1758227837636_xneomx7at",
-      "url": "images/portfolio/optimized/medium/zwon_1758227837636.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/zwon_1758227837636.jpg",
-      "fullUrl": "images/portfolio/optimized/full/zwon_1758227837636.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/zwon_1758227837636.jpg",
-      "category": "street",
-      "altText": "zwon train tag",
-      "uploadDate": "2025-09-18",
-      "originalName": "zwon.jpg"
-    },
-    {
       "id": "photo_1758233860984_0x9udtd9g",
       "url": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.jpg",
@@ -93,5 +82,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T02:43:08.648Z"
+  "lastUpdated": "2025-09-19T02:43:22.400Z"
 }
