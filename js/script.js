@@ -101,12 +101,12 @@ function submitForm() {
     const btnText = document.querySelector('.btn-text');
     const btnLoading = document.querySelector('.btn-loading');
     const formMessage = document.getElementById('formMessage');
-    
+
     // Show loading state
     submitBtn.disabled = true;
     btnText.style.display = 'none';
     btnLoading.style.display = 'inline';
-    
+
     // Get form data
     const formData = {
         name: document.getElementById('name').value.trim(),
@@ -114,53 +114,36 @@ function submitForm() {
         subject: document.getElementById('subject').value.trim(),
         message: document.getElementById('message').value.trim()
     };
-    
-    // Simulate form submission (replace with actual submission logic)
-    setTimeout(() => {
-        // Reset button state
+
+    // Submit form to API endpoint
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            formMessage.textContent = data.message || 'Thank you for your message! I\'ll get back to you soon.';
+            formMessage.className = 'form-message success';
+            document.getElementById('contactForm').reset();
+        } else {
+            formMessage.textContent = data.error || 'Sorry, there was an error sending your message. Please try again.';
+            formMessage.className = 'form-message error';
+        }
+    })
+    .catch(error => {
+        console.error('Contact form error:', error);
+        formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+        formMessage.className = 'form-message error';
+    })
+    .finally(() => {
         submitBtn.disabled = false;
         btnText.style.display = 'inline';
         btnLoading.style.display = 'none';
-        
-        // Show success message
-        formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
-        formMessage.className = 'form-message success';
-        
-        // Reset form
-        document.getElementById('contactForm').reset();
-        
-        // You would replace the setTimeout simulation with actual form submission
-        // Example using fetch API:
-        /*
-        fetch('/submit-contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
-                formMessage.className = 'form-message success';
-                document.getElementById('contactForm').reset();
-            } else {
-                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
-                formMessage.className = 'form-message error';
-            }
-        })
-        .catch(error => {
-            formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
-            formMessage.className = 'form-message error';
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
-        });
-        */
-    }, 2000);
+    });
 }
 
 // Shop functionality (basic add to cart)
