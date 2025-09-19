@@ -19,15 +19,6 @@
       "originalName": "buildingOnFilm.jpg"
     },
     {
-      "id": "photo_1758225369000_2fqlpc9sq",
-      "url": "images/portfolio/optimized/medium/rocky_terrain_1758225369000.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/rocky_terrain_1758225369000.jpg",
-      "category": "textures",
-      "altText": "its a rocky terrain",
-      "uploadDate": "2025-09-18",
-      "originalName": "rocky_terrain.jpg"
-    },
-    {
       "id": "photo_1758233860984_0x9udtd9g",
       "url": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.jpg",
@@ -181,5 +172,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T04:36:48.784Z"
+  "lastUpdated": "2025-09-19T16:58:13.371Z"
 }
