@@ -1,15 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758223917531_hgfe5735v",
-      "url": "images/portfolio/optimized/medium/castlewall_1758223917531.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/castlewall_1758223917531.jpg",
-      "category": "nature",
-      "altText": "baldurs gate 3",
-      "uploadDate": "2025-09-18",
-      "originalName": "castleWall.png"
-    },
-    {
       "id": "photo_1758223926753_70ias5dzh",
       "url": "images/portfolio/optimized/medium/knight_helmet_1758223926753.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/knight_helmet_1758223926753.jpg",
@@ -113,5 +104,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T02:36:05.766Z"
+  "lastUpdated": "2025-09-19T02:36:09.310Z"
 }
