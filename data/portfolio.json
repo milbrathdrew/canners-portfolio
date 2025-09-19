@@ -48,6 +48,17 @@
       "altText": "solar plasma",
       "uploadDate": "2025-09-18",
       "originalName": "Texturelabs_Atmosphere_126S.jpg"
+    },
+    {
+      "id": "photo_1758250089524_gklr963sf",
+      "url": "images/portfolio/optimized/medium/portfolio-02_1758250089524.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-02_1758250089524.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio-02_1758250089524.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-02_1758250089524.jpg",
+      "category": "nature",
+      "altText": "The first light of day spilling over Little Tahoma Peak. At 11,138 feet, this volcanic remnant is the third tallest peak in Mt. Rainier National Park. When hiking in the Sunrise quadrant of the park, I often find my gaze settling back on this silent sentinel, and this picture is a memory of the pure joy I felt the first time seeing it, and has since become an annual tradition of a hike.",
+      "uploadDate": "2025-09-19",
+      "originalName": "portfolio-02.jpg"
     }
   ],
   "categories": [
@@ -82,5 +93,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T02:43:22.400Z"
+  "lastUpdated": "2025-09-19T03:03:56.146Z"
 }
