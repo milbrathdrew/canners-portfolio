@@ -10,17 +10,6 @@
       "originalName": "buildingOnFilm.jpg"
     },
     {
-      "id": "photo_1758233860984_0x9udtd9g",
-      "url": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.jpg",
-      "fullUrl": "images/portfolio/optimized/full/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter_1758233860984.jpg",
-      "category": "products",
-      "altText": "knife fight",
-      "uploadDate": "2025-09-18",
-      "originalName": "6_17cd8962-cadd-46f8-88c5-4ddee17a5aa5-ezgif.com-webp-to-jpg-converter.jpg"
-    },
-    {
       "id": "photo_1758250089524_gklr963sf",
       "url": "images/portfolio/optimized/medium/portfolio-02_1758250089524.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio-02_1758250089524.jpg",
@@ -152,5 +141,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-09-19T16:58:18.630Z"
+  "lastUpdated": "2025-09-19T16:58:21.150Z"
 }
