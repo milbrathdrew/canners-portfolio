@@ -1,17 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758251940476_h1pcvkowg",
-      "url": "images/portfolio/optimized/medium/portfolio-17_1758251940476.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-17_1758251940476.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio-17_1758251940476.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-17_1758251940476.jpg",
-      "category": "nature",
-      "altText": "At 14,410 feet, Mount Rainier is the tallest peak in the contiguous U.S. With 25 named glaciers and 36 miles of permanent snow fields this active stratovolcano is one of the most dangerous in the cascade range. But to me, this mountain marks a pivotal moment in my life, and when I look east and see her towering in the skyline, I remember how far I've come from my small Midwest home town. I took this photo during an excitingly moody day on top of Third Burroughs Mountain at 7,828 feet. ",
-      "uploadDate": "2025-09-19",
-      "originalName": "portfolio-17.jpg"
-    },
-    {
       "id": "photo_1758251959780_ryql5p4w3",
       "url": "images/portfolio/optimized/medium/portfolio-04_1758251959780.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio-04_1758251959780.jpg",
@@ -132,5 +121,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:25:43.208Z"
+  "lastUpdated": "2025-10-05T16:25:45.161Z"
 }
