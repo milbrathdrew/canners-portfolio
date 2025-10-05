@@ -1,17 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758251965440_e8oysf59f",
-      "url": "images/portfolio/optimized/medium/portfolio-06_1758251965440.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-06_1758251965440.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio-06_1758251965440.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-06_1758251965440.jpg",
-      "category": "street",
-      "altText": "I caught this shot just moments before a heavy fog swallowed the Puget Sound. At 5:35am, the world felt suspended in a dampened noise, thriving with the unmistakable Pacific Northwest atmosphere that I've come to love so dearly. ",
-      "uploadDate": "2025-09-19",
-      "originalName": "portfolio-06.jpg"
-    },
-    {
       "id": "photo_1758254980739_jqu2pcdty",
       "url": "images/portfolio/optimized/medium/portfolio-10_1758254980739.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio-10_1758254980739.jpg",
@@ -88,5 +77,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:25:52.002Z"
+  "lastUpdated": "2025-10-05T16:25:56.305Z"
 }
