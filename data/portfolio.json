@@ -1,17 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758254980739_jqu2pcdty",
-      "url": "images/portfolio/optimized/medium/portfolio-10_1758254980739.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-10_1758254980739.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio-10_1758254980739.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-10_1758254980739.jpg",
-      "category": "street",
-      "altText": "This building appeared stuck in time, untouched by it owner, waiting for nothing. ",
-      "uploadDate": "2025-09-19",
-      "originalName": "portfolio-10.jpg"
-    },
-    {
       "id": "photo_1758254982606_xvxjz82ry",
       "url": "images/portfolio/optimized/medium/portfolio-08_1758254982606.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio-08_1758254982606.jpg",
@@ -77,5 +66,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:25:56.305Z"
+  "lastUpdated": "2025-10-05T16:25:58.511Z"
 }
