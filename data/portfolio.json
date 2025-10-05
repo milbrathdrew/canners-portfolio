@@ -23,17 +23,6 @@
       "originalName": "portfolio-06.jpg"
     },
     {
-      "id": "photo_1758254978851_n7atwsq8m",
-      "url": "images/portfolio/optimized/medium/portfolio-05_1758254978851.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-05_1758254978851.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio-05_1758254978851.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-05_1758254978851.jpg",
-      "category": "nature",
-      "altText": "Growing up to 2 feet in diameter, the Egg-Yolk Jelly has a very mild sting, so much so that it is not uncommon for these jellyfish to have crabs, small fish, or amphipods hitchhiking on or inside their bell. ",
-      "uploadDate": "2025-09-19",
-      "originalName": "portfolio-05.jpg"
-    },
-    {
       "id": "photo_1758254980739_jqu2pcdty",
       "url": "images/portfolio/optimized/medium/portfolio-10_1758254980739.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio-10_1758254980739.jpg",
@@ -121,5 +110,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:25:45.161Z"
+  "lastUpdated": "2025-10-05T16:25:46.877Z"
 }
