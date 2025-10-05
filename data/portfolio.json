@@ -1,17 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1758254982606_xvxjz82ry",
-      "url": "images/portfolio/optimized/medium/portfolio-08_1758254982606.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-08_1758254982606.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio-08_1758254982606.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-08_1758254982606.jpg",
-      "category": "street",
-      "altText": "An empty alley home to brick and bared windows. Like something out of a zombie survival, this area felt so forgotten.",
-      "uploadDate": "2025-09-19",
-      "originalName": "portfolio-08.jpg"
-    },
-    {
       "id": "photo_1758254984851_zh4iwtdlm",
       "url": "images/portfolio/optimized/medium/portfolio-07_1758254984851.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio-07_1758254984851.jpg",
@@ -66,5 +55,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:25:58.511Z"
+  "lastUpdated": "2025-10-05T16:26:01.226Z"
 }
