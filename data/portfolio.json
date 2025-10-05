@@ -1,17 +1,5 @@
 {
-  "photos": [
-    {
-      "id": "photo_1758254984851_zh4iwtdlm",
-      "url": "images/portfolio/optimized/medium/portfolio-07_1758254984851.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio-07_1758254984851.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio-07_1758254984851.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio-07_1758254984851.jpg",
-      "category": "street",
-      "altText": "A rainy city night, and the luminance of a very lonely pair of vacuums. I had fun with the cyan and red in this shot.",
-      "uploadDate": "2025-09-19",
-      "originalName": "portfolio-07.jpg"
-    }
-  ],
+  "photos": [],
   "categories": [
     {
       "id": "all",
@@ -44,5 +32,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:26:02.966Z"
+  "lastUpdated": "2025-10-05T16:26:05.041Z"
 }
