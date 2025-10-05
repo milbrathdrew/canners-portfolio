@@ -54,17 +54,6 @@
       "altText": "One of my favorite spots in the city. Tucked under an old bridge, each artist covering spots of a once empty concrete canvas, only to be power washed away time and time again.  ",
       "uploadDate": "2025-09-19",
       "originalName": "portfolio-09.jpg"
-    },
-    {
-      "id": "photo_1759681051921_kabg4u2s4",
-      "url": "images/portfolio/optimized/medium/can_7570_1759681051921.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/can_7570_1759681051921.jpg",
-      "fullUrl": "images/portfolio/optimized/full/can_7570_1759681051921.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/can_7570_1759681051921.jpg",
-      "category": "nature",
-      "altText": "CAN_7570.jpg",
-      "uploadDate": "2025-10-05",
-      "originalName": "CAN_7570.jpg"
     }
   ],
   "categories": [
@@ -99,5 +88,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:25:50.146Z"
+  "lastUpdated": "2025-10-05T16:25:52.002Z"
 }
