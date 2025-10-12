@@ -1,5 +1,336 @@
 {
-  "photos": [],
+  "photos": [
+    {
+      "id": "photo_1760312686639_mfv1c2ibh",
+      "url": "images/portfolio/optimized/medium/portfolio_web-13_1760312686639.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-13_1760312686639.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-13_1760312686639.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-13_1760312686639.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-13.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-13.jpg"
+    },
+    {
+      "id": "photo_1760312686671_hxpaezf9n",
+      "url": "images/portfolio/optimized/medium/portfolio_web-18_1760312686671.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-18_1760312686671.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-18_1760312686671.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-18_1760312686671.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-18.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-18.jpg"
+    },
+    {
+      "id": "photo_1760312686703_otku8dg24",
+      "url": "images/portfolio/optimized/medium/portfolio_web-21_1760312686703.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-21_1760312686703.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-21_1760312686703.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-21_1760312686703.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-21.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-21.jpg"
+    },
+    {
+      "id": "photo_1760312686721_5xrxgls1s",
+      "url": "images/portfolio/optimized/medium/portfolio_web-22_1760312686721.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-22_1760312686721.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-22_1760312686721.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-22_1760312686721.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-22.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-22.jpg"
+    },
+    {
+      "id": "photo_1760312686744_cc3wbqabs",
+      "url": "images/portfolio/optimized/medium/portfolio_web-23_1760312686744.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-23_1760312686744.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-23_1760312686744.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-23_1760312686744.jpg",
+      "category": "textures",
+      "altText": "Portfolio Web-23.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-23.jpg"
+    },
+    {
+      "id": "photo_1760312686781_4xcqbego7",
+      "url": "images/portfolio/optimized/medium/portfolio_web-24_1760312686781.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-24_1760312686781.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-24_1760312686781.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-24_1760312686781.jpg",
+      "category": "textures",
+      "altText": "Portfolio Web-24.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-24.jpg"
+    },
+    {
+      "id": "photo_1760312686819_jveoxe5ho",
+      "url": "images/portfolio/optimized/medium/portfolio_web-25_1760312686819.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-25_1760312686819.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-25_1760312686819.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-25_1760312686819.jpg",
+      "category": "textures",
+      "altText": "Portfolio Web-25.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-25.jpg"
+    },
+    {
+      "id": "photo_1760312686850_36av80kjg",
+      "url": "images/portfolio/optimized/medium/portfolio_web-26_1760312686850.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-26_1760312686850.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-26_1760312686850.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-26_1760312686850.jpg",
+      "category": "textures",
+      "altText": "Portfolio Web-26.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-26.jpg"
+    },
+    {
+      "id": "photo_1760312686878_c1hw7s8wg",
+      "url": "images/portfolio/optimized/medium/portfolio_web-29_1760312686878.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-29_1760312686878.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-29_1760312686878.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-29_1760312686878.jpg",
+      "category": "textures",
+      "altText": "Portfolio Web-29.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-29.jpg"
+    },
+    {
+      "id": "photo_1760312686909_us53isssp",
+      "url": "images/portfolio/optimized/medium/portfolio_web-30_1760312686909.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-30_1760312686909.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-30_1760312686909.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-30_1760312686909.jpg",
+      "category": "textures",
+      "altText": "Portfolio Web-30.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-30.jpg"
+    },
+    {
+      "id": "photo_1760312686929_hm3e292ji",
+      "url": "images/portfolio/optimized/medium/portfolio_web-27_1760312686929.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-27_1760312686929.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-27_1760312686929.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-27_1760312686929.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-27.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-27.jpg"
+    },
+    {
+      "id": "photo_1760312686952_rgc2yg2fh",
+      "url": "images/portfolio/optimized/medium/portfolio_web-28_1760312686952.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-28_1760312686952.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-28_1760312686952.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-28_1760312686952.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-28.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-28.jpg"
+    },
+    {
+      "id": "photo_1760312686987_tkdd3to6t",
+      "url": "images/portfolio/optimized/medium/portfolio_web-04_1760312686987.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-04_1760312686987.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-04_1760312686987.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-04_1760312686987.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-04.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-04.jpg"
+    },
+    {
+      "id": "photo_1760312687033_feviz3lvf",
+      "url": "images/portfolio/optimized/medium/portfolio_web-01_1760312687033.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-01_1760312687033.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-01_1760312687033.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-01_1760312687033.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-01.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-01.jpg"
+    },
+    {
+      "id": "photo_1760312687065_gqcnfj79i",
+      "url": "images/portfolio/optimized/medium/portfolio_web-02_1760312687065.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-02_1760312687065.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-02_1760312687065.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-02_1760312687065.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-02.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-02.jpg"
+    },
+    {
+      "id": "photo_1760312687087_vjmpkvtix",
+      "url": "images/portfolio/optimized/medium/portfolio_web-03_1760312687087.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-03_1760312687087.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-03_1760312687087.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-03_1760312687087.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-03.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-03.jpg"
+    },
+    {
+      "id": "photo_1760312687116_s7qq0gm8j",
+      "url": "images/portfolio/optimized/medium/portfolio_web-05_1760312687116.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-05_1760312687116.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-05_1760312687116.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-05_1760312687116.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-05.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-05.jpg"
+    },
+    {
+      "id": "photo_1760312687142_p7alxuext",
+      "url": "images/portfolio/optimized/medium/portfolio_web-06_1760312687142.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-06_1760312687142.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-06_1760312687142.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-06_1760312687142.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-06.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-06.jpg"
+    },
+    {
+      "id": "photo_1760312687175_ymg09vcyq",
+      "url": "images/portfolio/optimized/medium/portfolio_web-07_1760312687175.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-07_1760312687175.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-07_1760312687175.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-07_1760312687175.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-07.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-07.jpg"
+    },
+    {
+      "id": "photo_1760312687208_wqepndcc3",
+      "url": "images/portfolio/optimized/medium/portfolio_web-08_1760312687208.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-08_1760312687208.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-08_1760312687208.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-08_1760312687208.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-08.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-08.jpg"
+    },
+    {
+      "id": "photo_1760312687240_tbmpen2k6",
+      "url": "images/portfolio/optimized/medium/portfolio_web-09_1760312687240.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-09_1760312687240.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-09_1760312687240.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-09_1760312687240.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-09.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-09.jpg"
+    },
+    {
+      "id": "photo_1760312687263_vq8otengp",
+      "url": "images/portfolio/optimized/medium/portfolio_web-10_1760312687263.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-10_1760312687263.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-10_1760312687263.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-10_1760312687263.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-10.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-10.jpg"
+    },
+    {
+      "id": "photo_1760312687288_ru9pmy7gl",
+      "url": "images/portfolio/optimized/medium/portfolio_web-11_1760312687288.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-11_1760312687288.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-11_1760312687288.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-11_1760312687288.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-11.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-11.jpg"
+    },
+    {
+      "id": "photo_1760312687309_4gc1t97k9",
+      "url": "images/portfolio/optimized/medium/portfolio_web-12_1760312687309.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-12_1760312687309.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-12_1760312687309.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-12_1760312687309.jpg",
+      "category": "street",
+      "altText": "Portfolio Web-12.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-12.jpg"
+    },
+    {
+      "id": "photo_1760312687343_oc9c59q3z",
+      "url": "images/portfolio/optimized/medium/portfolio_web-14_1760312687343.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-14_1760312687343.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-14_1760312687343.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-14_1760312687343.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-14.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-14.jpg"
+    },
+    {
+      "id": "photo_1760312687381_epzth8ui2",
+      "url": "images/portfolio/optimized/medium/portfolio_web-15_1760312687381.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-15_1760312687381.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-15_1760312687381.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-15_1760312687381.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-15.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-15.jpg"
+    },
+    {
+      "id": "photo_1760312687410_s34ke78lt",
+      "url": "images/portfolio/optimized/medium/portfolio_web-16_1760312687410.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-16_1760312687410.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-16_1760312687410.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-16_1760312687410.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-16.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-16.jpg"
+    },
+    {
+      "id": "photo_1760312687447_ty4vu6kfz",
+      "url": "images/portfolio/optimized/medium/portfolio_web-17_1760312687447.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-17_1760312687447.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-17_1760312687447.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-17_1760312687447.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-17.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-17.jpg"
+    },
+    {
+      "id": "photo_1760312687494_yztrpiolo",
+      "url": "images/portfolio/optimized/medium/portfolio_web-19_1760312687494.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-19_1760312687494.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-19_1760312687494.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-19_1760312687494.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-19.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-19.jpg"
+    },
+    {
+      "id": "photo_1760312687533_c58pfa4gs",
+      "url": "images/portfolio/optimized/medium/portfolio_web-20_1760312687533.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-20_1760312687533.jpg",
+      "fullUrl": "images/portfolio/optimized/full/portfolio_web-20_1760312687533.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-20_1760312687533.jpg",
+      "category": "nature",
+      "altText": "Portfolio Web-20.jpg",
+      "uploadDate": "2025-10-12",
+      "originalName": "Portfolio Web-20.jpg"
+    }
+  ],
   "categories": [
     {
       "id": "all",
@@ -32,5 +363,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-10-05T16:26:05.041Z"
+  "lastUpdated": "2025-10-12T23:52:01.798Z"
 }
