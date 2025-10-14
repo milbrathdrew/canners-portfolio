@@ -212,7 +212,6 @@ class DynamicPortfolio {
                     <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
                     <div class="lightbox-content">
                         <img class="lightbox-image" id="lightboxImage" alt="">
-                        <div class="lightbox-info" id="lightboxInfo"></div>
                         <div class="lightbox-loading" id="lightboxLoading">Loading...</div>
                     </div>
                 </div>
@@ -254,7 +253,6 @@ class DynamicPortfolio {
     openLightbox(photo) {
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxInfo = document.getElementById('lightboxInfo');
         const lightboxLoading = document.getElementById('lightboxLoading');
 
         // Get filtered photos for navigation
@@ -282,12 +280,8 @@ class DynamicPortfolio {
                 lightboxImage.src = photo.fallbackUrl;
             } else {
                 lightboxLoading.style.display = 'none';
-                lightboxInfo.textContent = 'Failed to load image';
             }
         };
-
-        // Set info
-        lightboxInfo.textContent = photo.altText || photo.originalName || 'Photo';
 
         // Show lightbox
         lightbox.classList.add('active');

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="pixelHelm.svg">
+    <title>Bio - Photography Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="pixelHelm.svg?v=1">
+    <link rel="shortcut icon" href="pixelHelm.svg?v=1">
+    <link rel="apple-touch-icon" href="pixelHelm.svg?v=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cursors.css">
 </head>
@@ -18,7 +20,7 @@
                 <ul>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="shop.html">Shop</a></li>
-                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="bio.html" class="active">Bio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -26,14 +28,19 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="bio">
             <div class="container">
-                <h2>capturing moments</h2>
-                <p>the most natural thing about man is...</p>
+                <h2>Bio</h2>
+                <div class="bio-content">
+                    <div class="bio-text" id="bioText">
+                        <p>Loading bio...</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <script src="js/script.js"></script>
+    <script src="js/bio.js"></script>
 </body>
 </html>

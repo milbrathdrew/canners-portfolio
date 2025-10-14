@@ -17,6 +17,7 @@ class GitHubPortfolioAdmin {
         this.setupEventListeners();
         this.setupDropZone();
         this.loadCurrentPortfolio();
+        this.loadBio();
     }
 
     // Load saved configuration from localStorage
@@ -171,6 +172,9 @@ class GitHubPortfolioAdmin {
     setupEventListeners() {
         // Configuration
         document.getElementById('saveGithubConfig').addEventListener('click', () => this.saveConfig());
+
+        // Bio
+        document.getElementById('saveBio').addEventListener('click', () => this.saveBio());
 
         // File input
         document.getElementById('fileInput').addEventListener('change', (e) => this.handleFiles(e.target.files));
@@ -805,6 +809,93 @@ class GitHubPortfolioAdmin {
         const validationDiv = document.getElementById('fileValidation');
         validationDiv.innerHTML = '';
         validationDiv.style.display = 'none';
+    }
+
+    // Load bio from bio.json
+    async loadBio() {
+        try {
+            const response = await fetch('bio.json');
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('bioText').value = data.bioText || '';
+            }
+        } catch (error) {
+            console.log('No existing bio found or error loading:', error);
+        }
+    }
+
+    // Save bio to GitHub
+    async saveBio() {
+        const bioText = document.getElementById('bioText').value.trim();
+
+        if (!this.githubConfig.owner || !this.githubConfig.repo || !this.githubConfig.token) {
+            this.showStatus('bioStatus', 'Please configure GitHub settings first', 'error');
+            return;
+        }
+
+        this.showStatus('bioStatus', 'Saving bio...', 'info');
+
+        try {
+            const bioData = {
+                bioText: bioText,
+                lastUpdated: new Date().toISOString()
+            };
+
+            // Get current file SHA if it exists
+            let sha = null;
+            try {
+                const getResponse = await fetch(
+                    `https://api.github.com/repos/${this.githubConfig.owner}/${this.githubConfig.repo}/contents/bio.json?ref=${this.githubConfig.branch}`,
+                    {
+                        headers: {
+                            'Authorization': `token ${this.githubConfig.token}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    }
+                );
+                if (getResponse.ok) {
+                    const data = await getResponse.json();
+                    sha = data.sha;
+                }
+            } catch (e) {
+                console.log('No existing bio.json found, will create new');
+            }
+
+            // Create or update bio.json
+            const content = btoa(unescape(encodeURIComponent(JSON.stringify(bioData, null, 2))));
+            const payload = {
+                message: '📝 Update bio',
+                content: content,
+                branch: this.githubConfig.branch
+            };
+
+            if (sha) {
+                payload.sha = sha;
+            }
+
+            const response = await fetch(
+                `https://api.github.com/repos/${this.githubConfig.owner}/${this.githubConfig.repo}/contents/bio.json`,
+                {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${this.githubConfig.token}`,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify(payload)
+                }
+            );
+
+            if (response.ok) {
+                this.showStatus('bioStatus', 'Bio saved successfully!', 'success');
+            } else {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to save bio');
+            }
+        } catch (error) {
+            console.error('Error saving bio:', error);
+            this.showStatus('bioStatus', `Error: ${error.message}`, 'error');
+        }
     }
 }
 
