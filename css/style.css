@@ -330,6 +330,34 @@ header .container {
     background-color: #555;
 }
 
+/* Bio styles */
+.bio {
+    padding: 60px 0;
+}
+
+.bio h2 {
+    font-family: 'Vinque', serif;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bio-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bio-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.bio-text p {
+    margin-bottom: 20px;
+}
+
 /* Contact styles */
 .contact {
     padding: 60px 0;
