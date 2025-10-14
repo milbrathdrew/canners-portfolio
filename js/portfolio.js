@@ -207,11 +207,11 @@ class DynamicPortfolio {
         if (!document.querySelector('.lightbox')) {
             const lightboxHTML = `
                 <div class="lightbox" id="lightbox">
+                    <button class="lightbox-close" id="lightboxClose">&times;</button>
+                    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+                    <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
                     <div class="lightbox-content">
                         <img class="lightbox-image" id="lightboxImage" alt="">
-                        <button class="lightbox-close" id="lightboxClose">&times;</button>
-                        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
-                        <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
                         <div class="lightbox-info" id="lightboxInfo"></div>
                         <div class="lightbox-loading" id="lightboxLoading">Loading...</div>
                     </div>
