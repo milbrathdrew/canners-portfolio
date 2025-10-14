@@ -3,7 +3,7 @@ class DynamicPortfolio {
     constructor() {
         this.photos = [];
         this.categories = [];
-        this.currentFilter = 'all';
+        this.currentFilter = 'nature';
         this.currentLightboxIndex = 0;
         this.init();
     }
@@ -49,9 +49,7 @@ class DynamicPortfolio {
         galleryContainer.innerHTML = '';
 
         // Filter photos based on current filter
-        const filteredPhotos = this.currentFilter === 'all'
-            ? this.photos
-            : this.photos.filter(photo => photo.category === this.currentFilter);
+        const filteredPhotos = this.photos.filter(photo => photo.category === this.currentFilter);
 
         // Create gallery items
         filteredPhotos.forEach(photo => {
@@ -256,9 +254,7 @@ class DynamicPortfolio {
         const lightboxLoading = document.getElementById('lightboxLoading');
 
         // Get filtered photos for navigation
-        const filteredPhotos = this.currentFilter === 'all'
-            ? this.photos
-            : this.photos.filter(p => p.category === this.currentFilter);
+        const filteredPhotos = this.photos.filter(p => p.category === this.currentFilter);
 
         // Find index in filtered photos
         this.currentLightboxIndex = filteredPhotos.findIndex(p => p.id === photo.id || p.url === photo.url);
@@ -311,9 +307,7 @@ class DynamicPortfolio {
 
     // Navigate to previous image
     prevImage() {
-        const filteredPhotos = this.currentFilter === 'all'
-            ? this.photos
-            : this.photos.filter(p => p.category === this.currentFilter);
+        const filteredPhotos = this.photos.filter(p => p.category === this.currentFilter);
 
         if (filteredPhotos.length <= 1) return;
 
@@ -323,9 +317,7 @@ class DynamicPortfolio {
 
     // Navigate to next image
     nextImage() {
-        const filteredPhotos = this.currentFilter === 'all'
-            ? this.photos
-            : this.photos.filter(p => p.category === this.currentFilter);
+        const filteredPhotos = this.photos.filter(p => p.category === this.currentFilter);
 
         if (filteredPhotos.length <= 1) return;
 

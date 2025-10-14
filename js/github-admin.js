@@ -100,10 +100,10 @@ class GitHubPortfolioAdmin {
 
         // Group photos by category
         const photosByCategory = {};
-        const categories = ['nature', 'street', 'textures', 'products', 'film', 'all'];
+        const categories = ['nature', 'street', 'textures', 'products', 'film'];
 
         photos.forEach(photo => {
-            const category = photo.category || 'all';
+            const category = photo.category || 'nature';
             if (!photosByCategory[category]) {
                 photosByCategory[category] = [];
             }
@@ -162,10 +162,9 @@ class GitHubPortfolioAdmin {
             'street': 'Street',
             'textures': 'Textures',
             'products': 'Products',
-            'film': 'Film',
-            'all': 'Uncategorized'
+            'film': 'Film'
         };
-        return categoryNames[categoryId] || 'Unknown';
+        return categoryNames[categoryId] || 'Nature';
     }
 
     // Setup event listeners
@@ -267,7 +266,7 @@ class GitHubPortfolioAdmin {
                     fileData: e.target.result, // Base64 data
                     size: file.size,
                     type: file.type,
-                    category: 'all',
+                    category: 'nature',
                     altText: '',
                     uploadDate: new Date().toISOString().split('T')[0]
                 };
@@ -338,7 +337,6 @@ class GitHubPortfolioAdmin {
                     <div class="form-group">
                         <label>Category:</label>
                         <select onchange="githubAdmin.updateImageCategory(${index}, this.value)">
-                            <option value="all" ${image.category === 'all' ? 'selected' : ''}>All</option>
                             <option value="nature" ${image.category === 'nature' ? 'selected' : ''}>Nature</option>
                             <option value="street" ${image.category === 'street' ? 'selected' : ''}>Street</option>
                             <option value="textures" ${image.category === 'textures' ? 'selected' : ''}>Textures</option>
@@ -503,8 +501,7 @@ class GitHubPortfolioAdmin {
             portfolioData = {
                 photos: [],
                 categories: [
-                    { "id": "all", "name": "All", "active": true },
-                    { "id": "nature", "name": "Nature", "active": false },
+                    { "id": "nature", "name": "Nature", "active": true },
                     { "id": "street", "name": "Street", "active": false },
                     { "id": "textures", "name": "Textures", "active": false },
                     { "id": "products", "name": "Products", "active": false },
