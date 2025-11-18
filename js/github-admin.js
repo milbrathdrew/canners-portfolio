@@ -558,7 +558,7 @@ class GitHubPortfolioAdmin {
                         <a href="https://github.com/${this.githubConfig.owner}/${this.githubConfig.repo}" target="_blank" class="admin-link">
                             Repository
                         </a>
-                        <a href="https://canners-portfolio.pages.dev/portfolio.html" target="_blank" class="admin-link">
+                        <a href="https://canners-portfolio.pages.dev/" target="_blank" class="admin-link">
                             Live Portfolio
                         </a>
                     </div>
