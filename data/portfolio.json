@@ -12,17 +12,6 @@
       "originalName": "Portfolio Web-18.jpg"
     },
     {
-      "id": "photo_1760312686703_otku8dg24",
-      "url": "images/portfolio/optimized/medium/portfolio_web-21_1760312686703.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-21_1760312686703.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio_web-21_1760312686703.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-21_1760312686703.jpg",
-      "category": "nature",
-      "altText": "Portfolio Web-21.jpg",
-      "uploadDate": "2025-10-12",
-      "originalName": "Portfolio Web-21.jpg"
-    },
-    {
       "id": "photo_1760312686721_5xrxgls1s",
       "url": "images/portfolio/optimized/medium/portfolio_web-22_1760312686721.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-22_1760312686721.jpg",
@@ -440,5 +429,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-11-22T18:07:35.997Z"
+  "lastUpdated": "2025-11-22T18:07:37.926Z"
 }
