@@ -78,17 +78,6 @@
       "originalName": "Portfolio Web-06.jpg"
     },
     {
-      "id": "photo_1760312687175_ymg09vcyq",
-      "url": "images/portfolio/optimized/medium/portfolio_web-07_1760312687175.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-07_1760312687175.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio_web-07_1760312687175.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-07_1760312687175.jpg",
-      "category": "street",
-      "altText": "Portfolio Web-07.jpg",
-      "uploadDate": "2025-10-12",
-      "originalName": "Portfolio Web-07.jpg"
-    },
-    {
       "id": "photo_1760312687208_wqepndcc3",
       "url": "images/portfolio/optimized/medium/portfolio_web-08_1760312687208.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-08_1760312687208.jpg",
@@ -231,5 +220,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2025-11-22T18:08:05.126Z"
+  "lastUpdated": "2025-11-22T18:08:06.346Z"
 }
