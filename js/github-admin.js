@@ -88,7 +88,7 @@ class GitHubPortfolioAdmin {
         }
     }
 
-    // Display current photos from portfolio organized by category
+    // Display current photos from portfolio
     displayCurrentPhotos(photos) {
         if (photos.length === 0) return;
 
@@ -98,73 +98,30 @@ class GitHubPortfolioAdmin {
         const container = document.getElementById('currentPhotosList');
         container.innerHTML = '';
 
-        // Group photos by category
-        const photosByCategory = {};
-        const categories = ['nature', 'street', 'textures', 'products', 'film'];
-
         photos.forEach(photo => {
-            const category = photo.category || 'nature';
-            if (!photosByCategory[category]) {
-                photosByCategory[category] = [];
-            }
-            photosByCategory[category].push(photo);
-        });
-
-        // Display photos organized by category
-        categories.forEach(categoryId => {
-            const categoryPhotos = photosByCategory[categoryId];
-            if (!categoryPhotos || categoryPhotos.length === 0) return;
-
-            // Category header
-            const categoryHeader = document.createElement('div');
-            categoryHeader.className = 'category-section';
-            categoryHeader.innerHTML = `
-                <h4 class="category-title">${this.getCategoryDisplayName(categoryId)} (${categoryPhotos.length} photos)</h4>
-                <div class="category-photos"></div>
+            const photoDiv = document.createElement('div');
+            photoDiv.className = 'current-photo-item';
+            photoDiv.innerHTML = `
+                <div class="photo-preview">
+                    <img src="${photo.fallbackUrl || photo.url}" alt="${photo.altText}"
+                         style="width: 100px; height: 100px; object-fit: cover;"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="image-placeholder" style="display: none; width: 100px; height: 100px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #666;">
+                        Processing...
+                    </div>
+                </div>
+                <div class="photo-details">
+                    <div class="photo-name">${photo.originalName}</div>
+                    <div class="photo-alt">Alt: ${photo.altText}</div>
+                    <div class="photo-date">Uploaded: ${photo.uploadDate}</div>
+                    ${this.githubConfig.token ?
+                        `<button onclick="window.githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>` :
+                        `<button class="remove-btn" disabled title="Configure GitHub to enable photo removal">Remove (Configure GitHub)</button>`
+                    }
+                </div>
             `;
-
-            const categoryContainer = categoryHeader.querySelector('.category-photos');
-
-            // Add photos for this category
-            categoryPhotos.forEach(photo => {
-                const photoDiv = document.createElement('div');
-                photoDiv.className = 'current-photo-item';
-                photoDiv.innerHTML = `
-                    <div class="photo-preview">
-                        <img src="${photo.fallbackUrl || photo.url}" alt="${photo.altText}"
-                             style="width: 100px; height: 100px; object-fit: cover;"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="image-placeholder" style="display: none; width: 100px; height: 100px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #666;">
-                            Processing...
-                        </div>
-                    </div>
-                    <div class="photo-details">
-                        <div class="photo-name">${photo.originalName}</div>
-                        <div class="photo-alt">Alt: ${photo.altText}</div>
-                        <div class="photo-date">Uploaded: ${photo.uploadDate}</div>
-                        ${this.githubConfig.token ?
-                            `<button onclick="window.githubAdmin.removeExistingPhoto('${photo.id}')" class="remove-btn">Remove</button>` :
-                            `<button class="remove-btn" disabled title="Configure GitHub to enable photo removal">Remove (Configure GitHub)</button>`
-                        }
-                    </div>
-                `;
-                categoryContainer.appendChild(photoDiv);
-            });
-
-            container.appendChild(categoryHeader);
+            container.appendChild(photoDiv);
         });
-    }
-
-    // Get display name for category
-    getCategoryDisplayName(categoryId) {
-        const categoryNames = {
-            'nature': 'Nature',
-            'street': 'Street',
-            'textures': 'Textures',
-            'products': 'Products',
-            'film': 'Film'
-        };
-        return categoryNames[categoryId] || 'Nature';
     }
 
     // Setup event listeners
@@ -266,7 +223,6 @@ class GitHubPortfolioAdmin {
                     fileData: e.target.result, // Base64 data
                     size: file.size,
                     type: file.type,
-                    category: 'nature',
                     altText: '',
                     uploadDate: new Date().toISOString().split('T')[0]
                 };
@@ -335,16 +291,6 @@ class GitHubPortfolioAdmin {
                 <div class="image-details">
                     <div class="image-name">${image.originalName}</div>
                     <div class="form-group">
-                        <label>Category:</label>
-                        <select onchange="githubAdmin.updateImageCategory(${index}, this.value)">
-                            <option value="nature" ${image.category === 'nature' ? 'selected' : ''}>Nature</option>
-                            <option value="street" ${image.category === 'street' ? 'selected' : ''}>Street</option>
-                            <option value="textures" ${image.category === 'textures' ? 'selected' : ''}>Textures</option>
-                            <option value="products" ${image.category === 'products' ? 'selected' : ''}>Products</option>
-                            <option value="film" ${image.category === 'film' ? 'selected' : ''}>Film</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
                         <label>Alt Text:</label>
                         <input type="text" value="${image.altText}"
                                onchange="githubAdmin.updateImageAltText(${index}, this.value)"
@@ -355,11 +301,6 @@ class GitHubPortfolioAdmin {
             `;
             container.appendChild(imageDiv);
         });
-    }
-
-    // Update image category
-    updateImageCategory(index, category) {
-        this.uploadedImages[index].category = category;
     }
 
     // Update image alt text
@@ -498,16 +439,7 @@ class GitHubPortfolioAdmin {
             }
         } catch (error) {
             // Create new structure if doesn't exist
-            portfolioData = {
-                photos: [],
-                categories: [
-                    { "id": "nature", "name": "Nature", "active": true },
-                    { "id": "street", "name": "Street", "active": false },
-                    { "id": "textures", "name": "Textures", "active": false },
-                    { "id": "products", "name": "Products", "active": false },
-                    { "id": "film", "name": "Film", "active": false }
-                ]
-            };
+            portfolioData = { photos: [] };
         }
 
         // Add new photos

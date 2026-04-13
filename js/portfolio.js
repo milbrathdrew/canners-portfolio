@@ -2,8 +2,6 @@
 class DynamicPortfolio {
     constructor() {
         this.photos = [];
-        this.categories = [];
-        this.currentFilter = 'nature';
         this.currentLightboxIndex = 0;
         this.init();
     }
@@ -12,7 +10,6 @@ class DynamicPortfolio {
         try {
             await this.loadPortfolioData();
             this.renderGallery();
-            this.setupFiltering();
             this.setupLightbox();
         } catch (error) {
             console.error('Failed to load portfolio:', error);
@@ -29,12 +26,8 @@ class DynamicPortfolio {
 
         const data = await response.json();
         this.photos = data.photos || [];
-        this.categories = data.categories || [];
 
-        console.log('Loaded portfolio data:', {
-            photos: this.photos.length,
-            categories: this.categories.length
-        });
+        console.log('Loaded portfolio data:', { photos: this.photos.length });
     }
 
     // Render the gallery
@@ -48,11 +41,8 @@ class DynamicPortfolio {
         // Clear existing content
         galleryContainer.innerHTML = '';
 
-        // Filter photos based on current filter
-        const filteredPhotos = this.photos.filter(photo => photo.category === this.currentFilter);
-
-        // Create gallery items
-        filteredPhotos.forEach(photo => {
+        // Create gallery items for all photos
+        this.photos.forEach(photo => {
             const galleryItem = this.createGalleryItem(photo);
             galleryContainer.appendChild(galleryItem);
         });
@@ -104,27 +94,6 @@ class DynamicPortfolio {
         });
 
         return item;
-    }
-
-    // Setup category filtering
-    setupFiltering() {
-        const categoryLinks = document.querySelectorAll('.category-link');
-
-        categoryLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                // Update active state
-                categoryLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-
-                // Update current filter
-                this.currentFilter = link.getAttribute('data-category');
-
-                // Re-render gallery
-                this.renderGallery();
-            });
-        });
     }
 
     // Add loading animation to images
@@ -253,11 +222,8 @@ class DynamicPortfolio {
         const lightboxImage = document.getElementById('lightboxImage');
         const lightboxLoading = document.getElementById('lightboxLoading');
 
-        // Get filtered photos for navigation
-        const filteredPhotos = this.photos.filter(p => p.category === this.currentFilter);
-
-        // Find index in filtered photos
-        this.currentLightboxIndex = filteredPhotos.findIndex(p => p.id === photo.id || p.url === photo.url);
+        // Find index in all photos for navigation
+        this.currentLightboxIndex = this.photos.findIndex(p => p.id === photo.id || p.url === photo.url);
 
         // Show loading
         lightboxLoading.style.display = 'block';
@@ -290,7 +256,7 @@ class DynamicPortfolio {
         };
 
         // Update navigation buttons
-        this.updateNavigationButtons(filteredPhotos);
+        this.updateNavigationButtons(this.photos);
     }
 
     // Close lightbox
@@ -307,22 +273,18 @@ class DynamicPortfolio {
 
     // Navigate to previous image
     prevImage() {
-        const filteredPhotos = this.photos.filter(p => p.category === this.currentFilter);
+        if (this.photos.length <= 1) return;
 
-        if (filteredPhotos.length <= 1) return;
-
-        this.currentLightboxIndex = (this.currentLightboxIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
-        this.openLightbox(filteredPhotos[this.currentLightboxIndex]);
+        this.currentLightboxIndex = (this.currentLightboxIndex - 1 + this.photos.length) % this.photos.length;
+        this.openLightbox(this.photos[this.currentLightboxIndex]);
     }
 
     // Navigate to next image
     nextImage() {
-        const filteredPhotos = this.photos.filter(p => p.category === this.currentFilter);
+        if (this.photos.length <= 1) return;
 
-        if (filteredPhotos.length <= 1) return;
-
-        this.currentLightboxIndex = (this.currentLightboxIndex + 1) % filteredPhotos.length;
-        this.openLightbox(filteredPhotos[this.currentLightboxIndex]);
+        this.currentLightboxIndex = (this.currentLightboxIndex + 1) % this.photos.length;
+        this.openLightbox(this.photos[this.currentLightboxIndex]);
     }
 
     // Update navigation button visibility
