@@ -1,5 +1,16 @@
 {
-  "photos": [],
+  "photos": [
+    {
+      "id": "photo_1776659103920_3f8rlqhr4",
+      "url": "images/portfolio/optimized/medium/dsc04662_1776659103920.webp",
+      "fallbackUrl": "images/portfolio/optimized/medium/dsc04662_1776659103920.jpg",
+      "fullUrl": "images/portfolio/optimized/full/dsc04662_1776659103920.webp",
+      "fullFallbackUrl": "images/portfolio/optimized/full/dsc04662_1776659103920.jpg",
+      "altText": "DSC04662.jpg",
+      "uploadDate": "2026-04-20",
+      "originalName": "DSC04662.jpg"
+    }
+  ],
   "categories": [
     {
       "id": "all",
@@ -32,5 +43,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2026-04-20T02:41:44.210Z"
+  "lastUpdated": "2026-04-20T04:25:54.675Z"
 }
