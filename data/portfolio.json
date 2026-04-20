@@ -1,17 +1,6 @@
 {
   "photos": [
     {
-      "id": "photo_1763844230249_2a0n9vyah",
-      "url": "images/portfolio/optimized/medium/portfolio_web-22_1763844230249.webp",
-      "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-22_1763844230249.jpg",
-      "fullUrl": "images/portfolio/optimized/full/portfolio_web-22_1763844230249.webp",
-      "fullFallbackUrl": "images/portfolio/optimized/full/portfolio_web-22_1763844230249.jpg",
-      "category": "textures",
-      "altText": "Portfolio Web-22.jpg",
-      "uploadDate": "2025-11-22",
-      "originalName": "Portfolio Web-22.jpg"
-    },
-    {
       "id": "photo_1763844230280_er88ckibg",
       "url": "images/portfolio/optimized/medium/portfolio_web-23_1763844230280.webp",
       "fallbackUrl": "images/portfolio/optimized/medium/portfolio_web-23_1763844230280.jpg",
@@ -473,5 +462,5 @@
       "active": false
     }
   ],
-  "lastUpdated": "2026-04-20T02:40:11.228Z"
+  "lastUpdated": "2026-04-20T02:40:13.841Z"
 }
